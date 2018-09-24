@@ -7,6 +7,7 @@ import './App.css';
 class App extends Component {
   state = {
     data: [],
+    filteredData: [],
     sortAsc: {
       name: undefined,
       location: undefined,
@@ -27,7 +28,7 @@ class App extends Component {
           }
         })
       })
-      .then(events => this.setState({ data: events }))
+      .then(events => this.setState({ data: events, filteredData: events }))
       .catch(err => console.log(err));
   }
 
@@ -58,17 +59,23 @@ class App extends Component {
   }
 
   sortBy = (key) => {
-    let arrayCopy = [...this.state.data];
+    let arrayCopy = [...this.state.filteredData];
     const sortAsc = !this.state.sortAsc[key];
     arrayCopy.sort(this.compareBy(key, sortAsc));
     // need to set state of sort
     let newSortAscState = { ...this.state.sortAsc };
     newSortAscState[key] = sortAsc;
-    this.setState({ data: arrayCopy, sortAsc: newSortAscState });
+    this.setState({ filteredData: arrayCopy, sortAsc: newSortAscState });
+  }
+
+  filterBy = (event, key) => {
+    let arrayCopy = [...this.state.data];
+    arrayCopy = arrayCopy.filter(cfpEvent => cfpEvent[key].toLowerCase().includes(event.target.value.toLowerCase()))
+    this.setState({ filteredData: arrayCopy })
   }
 
   render() {
-    const rows = this.state.data.map((papercallEvent, i) => <EventRow key={i} {...papercallEvent} />);
+    const rows = this.state.filteredData.map((papercallEvent, i) => <EventRow key={i} {...papercallEvent} />);
 
     return (
       <div className="App">
@@ -78,7 +85,7 @@ class App extends Component {
         </header>
         <div className="Table">
           <div className="Table-header">
-            <div className="Table-headerCell" onClick={() => this.sortBy('name')}>Name</div>
+            <div className="Table-headerCell" onClick={() => this.sortBy('name')}>Name <input type='text' onChange={(event) => this.filterBy(event, 'name')} /></div>
             <div className="Table-headerCell" onClick={() => this.sortBy('location')}>Location</div>
             <div className="Table-headerCell" onClick={() => this.sortBy('momentDate')}>Event Date</div>
             <div className="Table-headerCell" onClick={() => this.sortBy('momentCfpClose')}>CFP Close Date</div>
