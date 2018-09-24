@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 import logo from './logo.svg';
 import { EventRow } from './EventRow.js';
 import './App.css';
@@ -18,8 +19,13 @@ class App extends Component {
     this.callApi()
       .then((res) => {
         // data cleanup
-
-        return res.events
+        return res.events.map((e) => {
+          return {
+            ...e,
+            momentDate: !!e.date ? moment(e.date, 'MMMM DD, YYYY') : null,
+            momentCfpClose: !!e.cfpClose ? moment(e.cfpClose, 'MMMM DD, YYYY HH: mm UTC') : null
+          }
+        })
       })
       .then(events => this.setState({ data: events }))
       .catch(err => console.log(err));
@@ -40,11 +46,13 @@ class App extends Component {
     if (!sortAsc) comparator = -1;
 
     return function (a, b) {
-      const aText = a[key].toString().toLowerCase();
-      const bText = b[key].toString().toLowerCase();
+      let aValue = a[key];
+      let bValue = b[key];
+      if (typeof (aValue) === "string") aValue = aValue.toLowerCase();
+      if (typeof (bValue) === "string") bValue = bValue.toLowerCase();
 
-      if (aText < bText) return comparator * -1;
-      if (aText > bText) return comparator * 1;
+      if (aValue < bValue) return comparator * -1;
+      if (aValue > bValue) return comparator * 1;
       return 0;
     };
   }
@@ -72,8 +80,8 @@ class App extends Component {
           <div className="Table-header">
             <div className="Table-headerCell" onClick={() => this.sortBy('name')}>Name</div>
             <div className="Table-headerCell" onClick={() => this.sortBy('location')}>Location</div>
-            <div className="Table-headerCell">Event Date</div>
-            <div className="Table-headerCell">CFP Close Date</div>
+            <div className="Table-headerCell" onClick={() => this.sortBy('momentDate')}>Event Date</div>
+            <div className="Table-headerCell" onClick={() => this.sortBy('momentCfpClose')}>CFP Close Date</div>
           </div>
           <div className="Table-body">
             {rows}
