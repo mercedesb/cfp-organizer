@@ -1,13 +1,10 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
 
 .App-header {
+  text-align: center;
   background-color: #222;
   height: 150px;
   padding: 20px;
@@ -25,4 +22,35 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.Table {
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
+}
+    
+.Table-header {
+  display: flex;
+  padding: 2em 0;
+  background-color: #444;
+  color: #fff;
+}
+
+.Table-headerCell {
+  flex: 1;
+  cursor: pointer;
+}
+
+.EventRow {
+  display: flex;
+  padding: 1em 0;
+}
+
+.EventRow:nth-child(2n) {
+  background-color: #CCC;
+}
+
+.EventRow-cell {
+  flex: 1;
 }
