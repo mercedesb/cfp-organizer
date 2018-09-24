@@ -16,7 +16,12 @@ class App extends Component {
 
   componentDidMount() {
     this.callApi()
-      .then(res => this.setState({ data: res.events }))
+      .then((res) => {
+        // data cleanup
+
+        return res.events
+      })
+      .then(events => this.setState({ data: events }))
       .catch(err => console.log(err));
   }
 
@@ -35,8 +40,11 @@ class App extends Component {
     if (!sortAsc) comparator = -1;
 
     return function (a, b) {
-      if (a[key] < b[key]) return comparator * -1;
-      if (a[key] > b[key]) return comparator * 1;
+      const aText = a[key].toString().toLowerCase();
+      const bText = b[key].toString().toLowerCase();
+
+      if (aText < bText) return comparator * -1;
+      if (aText > bText) return comparator * 1;
       return 0;
     };
   }
@@ -64,8 +72,8 @@ class App extends Component {
           <div className="Table-header">
             <div className="Table-headerCell" onClick={() => this.sortBy('name')}>Name</div>
             <div className="Table-headerCell" onClick={() => this.sortBy('location')}>Location</div>
-            <div className="Table-headerCell" onClick={() => this.sortBy('date')}>Event Date</div>
-            <div className="Table-headerCell" onClick={() => this.sortBy('cfpClose')}>CFP Close Date</div>
+            <div className="Table-headerCell">Event Date</div>
+            <div className="Table-headerCell">CFP Close Date</div>
           </div>
           <div className="Table-body">
             {rows}
