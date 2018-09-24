@@ -1,9 +1,30 @@
 const express = require('express');
+var mcache = require('memory-cache');
 const requestPromise = require('request-promise');
 const cheerio = require('cheerio');
 
 const app = express();
 const port = process.env.PORT || 5000;
+
+const ONE_DAY = 60 * 60 * 24;
+
+const cache = (duration) => {
+  return (req, res, next) => {
+    let key = '__express__' + req.originalUrl || req.url
+    let cachedBody = mcache.get(key)
+    if (cachedBody) {
+      res.send(cachedBody)
+      return
+    } else {
+      res.sendResponse = res.send
+      res.send = (body) => {
+        mcache.put(key, body, duration * 1000);
+        res.sendResponse(body)
+      }
+      next()
+    }
+  }
+}
 
 app.get('/api/hello', (req, res) => {
   res.send({ express: 'Hello From Express' });
@@ -20,7 +41,7 @@ const PAPERCALL_CFP_CLOSE_SELECTOR = '.panel-body .row .col-md-11.col-sm-12 h4 >
 
 let pageNumbers;
 
-app.get('/api/openCfps', (req, res) => {
+app.get('/api/openCfps', cache(ONE_DAY), (req, res) => {
   let events = [];
   const promises = [];
   scrapePageOfEvents(1).then((firstPageOfEvents) => {
