@@ -8,6 +8,21 @@ body {
   background-color:#1F2739;
 }
 
+.App-header {
+  text-align:center;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 400;
+  color: #21aee1;
+}
+
+h2 {
+  font-size: 1em;
+  color: #FB667A;
+}
+
 a {
   color: #FB667A;
 }

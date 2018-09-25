@@ -81,6 +81,10 @@ class App extends Component {
 
     return (
       <div className="App">
+        <div className="App-header">
+          <h1>CFP Organizer</h1>
+          <h2>Sort and filter Papercall CFPs</h2>
+        </div>
         <div className="Table">
           <header className="Table-header">
             <div className="Table-headerCell">
