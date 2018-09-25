@@ -1,56 +1,63 @@
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.42em;
+  color:#A7A1AE;
+  background-color:#1F2739;
 }
 
-.App-header {
-  text-align: center;
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+a {
+  color: #FB667A;
 }
 
 .Table {
-  margin: 2em;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  width: 80%;
+  margin: 0 auto;
 }
-    
+
 .Table-header {
   display: flex;
-  padding: 2em 0;
-  background-color: #444;
   color: #fff;
 }
 
 .Table-headerCell {
   flex: 1;
   cursor: pointer;
+  background-color: #1F2739;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: left;
+  color: #5496b3;
 }
 
 .EventRow {
   display: flex;
-  padding: 1em 0;
-}
-
-.EventRow:nth-child(2n) {
-  background-color: #CCC;
 }
 
 .EventRow-cell {
   flex: 1;
+  font-weight: normal;
+  font-size: 1em;
+  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+  -moz-box-shadow: 0 2px 2px -2px #0E1119;
+  box-shadow: 0 2px 2px -2px #0E1119;
+  border: 1px solid #1F2739;
+  border-radius: 2px;
+}
+
+.EventRow .EventRow-cell {
+  background-color: #323C50;
+}
+
+.EventRow:nth-child(even) .EventRow-cell {
+  background-color: #2C3446;
+}
+
+.Table-headerCell, .EventRow-cell {
+  padding: 1em 2em;
 }

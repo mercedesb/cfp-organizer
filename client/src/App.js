@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import logo from './logo.svg';
 import { EventRow } from './EventRow.js';
 import './App.css';
 
@@ -82,12 +81,8 @@ class App extends Component {
 
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
         <div className="Table">
-          <div className="Table-header">
+          <header className="Table-header">
             <div className="Table-headerCell">
               <p onClick={() => this.sortBy('name')}>Name</p> 
               <input type='text' onChange={(event) => this.filterBy(event, ['name'])} />
@@ -106,7 +101,7 @@ class App extends Component {
               <p>Event Tags</p>
               <input type='text' onChange={(event) => this.filterBy(event, ['eventTags'])} />
             </div>
-          </div>
+          </header>
           <div className="Table-body">
             {rows}
           </div>
