@@ -2,6 +2,15 @@ const express = require('express');
 var mcache = require('memory-cache');
 const requestPromise = require('request-promise');
 const cheerio = require('cheerio');
+var NodeGeocoder = require('node-geocoder');
+var options = {
+  provider: 'here',
+  appId: 'Ut6qSoF403ucFxQairyM',
+  appCode: 'p5OPQ-x-K8670BLPZ-u2CA',
+  language: 'en'
+};
+
+var geocoder = NodeGeocoder(options);
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -42,25 +51,54 @@ const PAPERCALL_CFP_CLOSE_SELECTOR = '.panel-body .row .col-md-11.col-sm-12 h4 >
 let pageNumbers;
 
 app.get('/api/openCfps', cache(ONE_DAY), (req, res) => {
-  let events = [];
-  const promises = [];
-  scrapePageOfEvents(1).then((firstPageOfEvents) => {
-    events = events.concat(firstPageOfEvents);
-
-    let i = 2;
-    while (i <= pageNumbers) {
-      promises.push(scrapePageOfEvents(i));
-      i += 1;
-    }
-
-    Promise.all(promises).then(function (pagesOfEvents) {
-      pagesOfEvents.forEach((pageOfEvents) => {
-        events = events.concat(pageOfEvents);
-      })
-      res.send({ events: events })
+  getEvents().then((events) => {
+    let geocodePromises = [];
+    events.forEach((e) => {
+      let currPromise = geocoder.geocode(e.location)
+        .then(function (res) {
+          if (res && res.length > 0) {
+            e['city'] = res[0].city;
+            e['country'] = res[0].country;
+            e['countryCode'] = res[0].countryCode;
+          }
+          return e;
+        })
+        .catch(function (err) {
+          console.log(err);
+        })
+      geocodePromises.push(currPromise);
     });
+
+    Promise.all(geocodePromises).then((events) => {
+      console.log(events[0])
+      res.send({ events: events });
+    })
   });
 });
+
+function getEvents() {
+  let events = [];
+  const promises = [];
+  return scrapePageOfEvents(1)
+    .then((firstPageOfEvents) => {
+      events = events.concat(firstPageOfEvents);
+
+      let i = 2;
+      while (i <= pageNumbers) {
+        promises.push(scrapePageOfEvents(i));
+        i += 1;
+      }
+
+      return Promise.all(promises)
+        .then(function (pagesOfEvents) {
+          pagesOfEvents.forEach((pageOfEvents) => {
+            events = events.concat(pageOfEvents);
+          });
+
+          return events;
+        });
+  });
+}
 
 function scrapePageOfEvents(pageNumber) {
   const url = `${PAPERCALL_URL}${pageNumber}`;
@@ -96,7 +134,7 @@ function scrapePageOfEvents(pageNumber) {
       console.log(err)
       return [];
     });
-};
+}
 
 function parseDate(dateText) {
   if (!dateText) return;
