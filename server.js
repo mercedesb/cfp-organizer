@@ -56,11 +56,15 @@ app.get('/api/openCfps', cache(ONE_DAY), (req, res) => {
     events.forEach((e) => {
       let currPromise = geocoder.geocode(e.location)
         .then(function (res) {
+          let geoCodeData;
           if (res && res.length > 0) {
-            e['city'] = res[0].city;
-            e['country'] = res[0].country;
-            e['countryCode'] = res[0].countryCode;
+            geoCodeData = res[0];
+          } else {
+            geoCodeData = { city: '', country: '', countryCode: '' };
           }
+          e['city'] = geoCodeData.city || '';
+          e['country'] = geoCodeData.country || '';
+          e['countryCode'] = geoCodeData.countryCode || '';
           return e;
         })
         .catch(function (err) {
@@ -70,7 +74,6 @@ app.get('/api/openCfps', cache(ONE_DAY), (req, res) => {
     });
 
     Promise.all(geocodePromises).then((events) => {
-      console.log(events[0])
       res.send({ events: events });
     })
   });
@@ -121,8 +124,8 @@ function scrapePageOfEvents(pageNumber) {
         const splitName = eventHeading.split('-');
 
         events[i] = {
-          name: splitName[0].trim(),
-          location: splitName[splitName.length - 1].trim(),
+          name: splitName.length > 0 ? splitName[0].trim() : '',
+          location: splitName.length > 0 ? splitName[splitName.length - 1].trim() : '',
           date: date,
           // September 29, 2018 09:09 UTC
           cfpClose: $(el).find(PAPERCALL_CFP_CLOSE_SELECTOR).text()

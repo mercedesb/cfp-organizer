@@ -68,9 +68,11 @@ class App extends Component {
     this.setState({ filteredData: arrayCopy, sortAsc: newSortAscState });
   }
 
-  filterBy = (event, key) => {
+  filterBy = (event, keys) => {
     let arrayCopy = [...this.state.data];
-    arrayCopy = arrayCopy.filter(cfpEvent => cfpEvent[key].toLowerCase().includes(event.target.value.toLowerCase()))
+    arrayCopy = arrayCopy.filter((cfpEvent) => {
+      return keys.some(key => cfpEvent[key].toLowerCase().includes(event.target.value.toLowerCase()))
+    })
     this.setState({ filteredData: arrayCopy })
   }
 
@@ -87,11 +89,11 @@ class App extends Component {
           <div className="Table-header">
             <div className="Table-headerCell">
               <p onClick={() => this.sortBy('name')}>Name</p> 
-              <input type='text' onChange={(event) => this.filterBy(event, 'name')} />
+              <input type='text' onChange={(event) => this.filterBy(event, ['name'])} />
             </div>
             <div className="Table-headerCell">
               <p onClick={() => this.sortBy('location')}>Location</p> 
-              <input type='text' onChange={(event) => this.filterBy(event, 'location')} />
+              <input type='text' onChange={(event) => this.filterBy(event, ['location', 'country', 'countryCode', 'city'])} />
             </div>
             <div className="Table-headerCell">
               <p onClick={() => this.sortBy('momentDate')}>Event Date</p>
