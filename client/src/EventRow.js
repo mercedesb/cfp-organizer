@@ -1,10 +1,10 @@
 import React from 'react';
 
-export const EventRow = ({ name, location, date, cfpClose }) => (
+export const EventRow = ({ name, url, location, date, cfpClose, cfpUrl }) => (
   <div className="EventRow">
-    <div className="EventRow-cell">{name}</div>
+    <div className="EventRow-cell"><a href={url}>{name}</a></div>
     <div className="EventRow-cell">{location}</div>
     <div className="EventRow-cell">{date}</div>
-    <div className="EventRow-cell">{cfpClose}</div>
+    <div className="EventRow-cell"><a href={cfpUrl}>{cfpClose}</a></div>
   </div>
 );

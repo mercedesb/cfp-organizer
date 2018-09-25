@@ -45,7 +45,7 @@ const PAPERCALL_PAGE_NUMBER_SELECTOR = '.pagination li:nth-last-child(2) a';
 // const PAPERCALL_PAGINATION_SELECTOR = '.pagination li:not(.prev):not(.next) > *';
 const PAPERCALL_EVENT_ROW_SELECTOR = '.panel.panel-default';
 const PAPERCALL_DATE_CONTAINER_SELECTOR = '.panel-body .row .col-md-11.col-sm-12 h4 > strong';
-const PAPERCALL_HEADING_SELECTOR = '.event__title a';
+const PAPERCALL_HEADING_SELECTOR = '.event__title a:last-child';
 const PAPERCALL_CFP_CLOSE_SELECTOR = '.panel-body .row .col-md-11.col-sm-12 h4 > table tr:first-child td:nth-child(2)';
 
 let pageNumbers;
@@ -117,18 +117,20 @@ function scrapePageOfEvents(pageNumber) {
 
       const events = []
       $(PAPERCALL_EVENT_ROW_SELECTOR).each(function (i, el) {
-        let date = $(el).find(PAPERCALL_DATE_CONTAINER_SELECTOR).parent().text();
-        date = parseDate(date);
-
-        const eventHeading = $(el).find(PAPERCALL_HEADING_SELECTOR).last().text();
+        const date = $(el).find(PAPERCALL_DATE_CONTAINER_SELECTOR).parent().text();
+        const eventHeading = $(el).find(PAPERCALL_HEADING_SELECTOR).text();
         const splitName = eventHeading.split('-');
+        const eventUrl = $(el).find('h4.hidden-xs a').text()
+        const cfpUrl = $(el).find(PAPERCALL_HEADING_SELECTOR).attr('href');
 
         events[i] = {
           name: splitName.length > 0 ? splitName[0].trim() : '',
           location: splitName.length > 0 ? splitName[splitName.length - 1].trim() : '',
-          date: date,
+          date: parseDate(date),
           // September 29, 2018 09:09 UTC
-          cfpClose: $(el).find(PAPERCALL_CFP_CLOSE_SELECTOR).text()
+          cfpClose: $(el).find(PAPERCALL_CFP_CLOSE_SELECTOR).text() || '',
+          url: eventUrl || '',
+          cfpUrl: cfpUrl || '',
         };
       });
       return events;
