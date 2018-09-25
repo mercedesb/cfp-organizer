@@ -21,6 +21,7 @@ class App extends Component {
       .then((res) => {
         // data cleanup
         return res.events.map((e) => {
+          console.log(e.eventTags)
           return {
             ...e,
             momentDate: !!e.date ? moment(e.date, 'MMMM DD, YYYY') : null,
@@ -100,6 +101,10 @@ class App extends Component {
             </div>
             <div className="Table-headerCell">
               <p onClick={() => this.sortBy('momentCfpClose')}>CFP Close Date</p>
+            </div>
+            <div className="Table-headerCell">
+              <p>Event Tags</p>
+              <input type='text' onChange={(event) => this.filterBy(event, ['eventTags'])} />
             </div>
           </div>
           <div className="Table-body">

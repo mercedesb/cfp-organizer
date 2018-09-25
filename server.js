@@ -47,6 +47,7 @@ const PAPERCALL_EVENT_ROW_SELECTOR = '.panel.panel-default';
 const PAPERCALL_DATE_CONTAINER_SELECTOR = '.panel-body .row .col-md-11.col-sm-12 h4 > strong';
 const PAPERCALL_HEADING_SELECTOR = '.event__title a:last-child';
 const PAPERCALL_CFP_CLOSE_SELECTOR = '.panel-body .row .col-md-11.col-sm-12 h4 > table tr:first-child td:nth-child(2)';
+const PAPERCALL_EVENT_TAGS_SELECTOR = '.panel-body .row .col-md-11.col-sm-12 h4:last-child';
 
 let pageNumbers;
 
@@ -122,6 +123,12 @@ function scrapePageOfEvents(pageNumber) {
         const splitName = eventHeading.split('-');
         const eventUrl = $(el).find('h4.hidden-xs a').text()
         const cfpUrl = $(el).find(PAPERCALL_HEADING_SELECTOR).attr('href');
+        
+        let tags = []
+        $(el).find(PAPERCALL_EVENT_TAGS_SELECTOR).children().each(function (i, elem) {
+          tags[i] = $(elem).text();
+        });
+        const eventTags = tags.join(', ');
 
         events[i] = {
           name: splitName.length > 0 ? splitName[0].trim() : '',
@@ -131,6 +138,7 @@ function scrapePageOfEvents(pageNumber) {
           cfpClose: $(el).find(PAPERCALL_CFP_CLOSE_SELECTOR).text() || '',
           url: eventUrl || '',
           cfpUrl: cfpUrl || '',
+          eventTags: eventTags
         };
       });
       return events;
