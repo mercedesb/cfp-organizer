@@ -7,9 +7,11 @@ This is a super simple React app with an Express backend for sorting and filteri
 Papercall's UI doesn't allow for sorting or filtering the event name, location, date, or CFP close date of the listed events. And there isn't an API to use for getting this data. This app is meant to make those activities easier.
 
 ## Installation
-`git clone https://github.com/mercedesb/cfp-organizer.git`
-`yarn`
-`cd client && yarn`
+```
+git clone https://github.com/mercedesb/cfp-organizer.git
+yarn
+cd client && yarn
+```
 
 This project does require a free account with [Here](https://developer.here.com/) to use their Geocoder API. Create an account, then create a project and generate an App Id and App Code for JavaScript/REST APIs.
 
