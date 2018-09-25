@@ -87,22 +87,22 @@ class App extends Component {
         </div>
         <div className="Table">
           <header className="Table-header">
-            <div className="Table-headerCell">
-              <p onClick={() => this.sortBy('name')}>Name</p> 
+            <div className="Table-headerCell Table-headerCell--sortable">
+              <span onClick={() => this.sortBy('name')}>Name</span> 
               <input type='text' onChange={(event) => this.filterBy(event, ['name'])} />
             </div>
-            <div className="Table-headerCell">
-              <p onClick={() => this.sortBy('location')}>Location</p> 
+            <div className="Table-headerCell Table-headerCell--sortable">
+              <span onClick={() => this.sortBy('location')}>Location</span> 
               <input type='text' onChange={(event) => this.filterBy(event, ['location', 'country', 'countryCode', 'city'])} />
             </div>
-            <div className="Table-headerCell">
-              <p onClick={() => this.sortBy('momentDate')}>Event Date</p>
+            <div className="Table-headerCell Table-headerCell--sortable">
+              <span onClick={() => this.sortBy('momentDate')}>Event Date</span>
+            </div>
+            <div className="Table-headerCell Table-headerCell--sortable">
+              <span onClick={() => this.sortBy('momentCfpClose')}>CFP Close Date</span>
             </div>
             <div className="Table-headerCell">
-              <p onClick={() => this.sortBy('momentCfpClose')}>CFP Close Date</p>
-            </div>
-            <div className="Table-headerCell">
-              <p>Event Tags</p>
+              <span>Event Tags</span>
               <input type='text' onChange={(event) => this.filterBy(event, ['eventTags'])} />
             </div>
           </header>

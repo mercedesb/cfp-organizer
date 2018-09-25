@@ -1,30 +1,57 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville);
+@import url(https://fonts.googleapis.com/css?family=Poppins:200,400,400i,600);
+
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
   line-height: 1.42em;
-  color:#A7A1AE;
-  background-color:#1F2739;
+  color:#fff;
+  background-color:#3f3837;
 }
 
 .App-header {
   text-align:center;
+  margin: 4em 2em 2em;
 }
 
 h1 {
+  font-family: 'Libre Baskerville', serif; 
   font-size: 2em;
   font-weight: 400;
-  color: #21aee1;
+  color: #db9408;
 }
 
 h2 {
   font-size: 1em;
-  color: #FB667A;
+  color: #e1727e;
 }
 
 a {
-  color: #FB667A;
+  color: #e1727e;
+}
+
+input[type=email], input[type=number], input[type=password], input[type=tel], input[type=text], input[type=url], textarea{
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-block;
+  min-height: 36px;
+  padding: 8px 12px;
+  width: 100%;
+  margin-top: 5px;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius: 1px;
+  -webkit-border-radius: 1px;
+  border-radius: 1px;
+  font-size: 15px;
+  color: #404040;
+  outline: none;
 }
 
 .Table {
@@ -42,12 +69,13 @@ a {
 
 .Table-headerCell {
   flex: 1;
-  cursor: pointer;
-  background-color: #1F2739;
+  background-color: #4d4443;
   font-weight: bold;
-  font-size: 1em;
-  text-align: left;
-  color: #5496b3;
+  color: #b9892a;
+}
+
+.Table-headerCell--sortable span {
+  cursor: pointer;
 }
 
 .EventRow {
@@ -57,22 +85,18 @@ a {
 .EventRow-cell {
   flex: 1;
   font-weight: normal;
-  font-size: 1em;
-  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
-  -moz-box-shadow: 0 2px 2px -2px #0E1119;
-  box-shadow: 0 2px 2px -2px #0E1119;
-  border: 1px solid #1F2739;
+  border: 1px solid #3f3837;
   border-radius: 2px;
 }
 
 .EventRow .EventRow-cell {
-  background-color: #323C50;
+  background-color: #5a504f;
 }
 
 .EventRow:nth-child(even) .EventRow-cell {
-  background-color: #2C3446;
+  background-color: #4d4443;
 }
 
 .Table-headerCell, .EventRow-cell {
-  padding: 1em 2em;
+  padding: 1em 1.5em;
 }
