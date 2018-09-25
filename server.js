@@ -3,10 +3,13 @@ var mcache = require('memory-cache');
 const requestPromise = require('request-promise');
 const cheerio = require('cheerio');
 var NodeGeocoder = require('node-geocoder');
+
+var hereConfig = require('./hereConfig.json');
+
 var options = {
   provider: 'here',
-  appId: 'Ut6qSoF403ucFxQairyM',
-  appCode: 'p5OPQ-x-K8670BLPZ-u2CA',
+  appId: hereConfig.appId,
+  appCode: hereConfig.appCode,
   language: 'en'
 };
 
