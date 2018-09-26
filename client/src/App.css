@@ -1,6 +1,5 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville);
-@import url(https://fonts.googleapis.com/css?family=Poppins:200,400,400i,600);
+@import url(https://fonts.googleapis.com/css?family=Poppins:200,400,600);
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -16,7 +15,7 @@ body {
 }
 
 h1 {
-  font-family: 'Libre Baskerville', serif; 
+  font-family: 'Poppins', sans-serif;
   font-size: 2em;
   font-weight: 400;
   color: #db9408;
