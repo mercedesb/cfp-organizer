@@ -4,6 +4,8 @@ const requestPromise = require('request-promise');
 const cheerio = require('cheerio');
 var NodeGeocoder = require('node-geocoder');
 
+var continents = require('./continents.json');
+var countries = require('./countries.json');
 var hereConfig = require('./hereConfig.json');
 
 var options = {
@@ -69,6 +71,7 @@ app.get('/api/openCfps', cache(ONE_DAY), (req, res) => {
           e['city'] = geoCodeData.city || '';
           e['country'] = geoCodeData.country || '';
           e['countryCode'] = geoCodeData.countryCode || '';
+          e['continent'] = continents[(countries[geoCodeData.countryCode] || {}).continent] || '';
           return e;
         })
         .catch(function (err) {

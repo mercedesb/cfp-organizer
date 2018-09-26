@@ -117,7 +117,7 @@ class App extends Component {
               <input 
                 type='text' 
                 name='location'
-                onChange={(event) => this.filterBy(event, ['location', 'country', 'countryCode', 'city'])} 
+                onChange={(event) => this.filterBy(event, ['location', 'continent', 'country', 'countryCode', 'city'])} 
                 placeholder='Search'/>
             </div>
             <div className="Table-headerCell">
