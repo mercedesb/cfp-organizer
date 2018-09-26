@@ -7,6 +7,7 @@ import './App.css';
 class App extends Component {
   state = {
     data: [], 
+    activeView: 'list',
     tableHeaders: [
       {
         name: 'name',
@@ -69,18 +70,28 @@ class App extends Component {
     return body;
   };
 
+  setActiveView(view) {
+    this.setState({activeView: view})
+  }
+
   render() {
     return (
       <div className="App">
         <div className="App-header">
           <h1>CFP Organizer</h1>
           <h2>Sort and filter Papercall CFPs</h2>
+          <ul className='ViewList'>
+            <li className={`ViewList-item ${this.state.activeView === 'list' ? 'ViewList-item--active' : ''}`} onClick={() => this.setActiveView('list')}>List</li>
+            <li className={`ViewList-item ${this.state.activeView === 'map' ? 'ViewList-item--active' : ''}`} onClick={() => this.setActiveView('map')}>Map</li>
+          </ul>
         </div>
-        <Table 
-          headers={this.state.tableHeaders}
-          data={this.state.data}
-          rowComponent={(dataItem, i) => <EventRow className='Table-row' rowClassName='Table-cell' key={i} event={dataItem} />}
-        />
+        { this.state.activeView === 'list' &&
+          <Table 
+            headers={this.state.tableHeaders}
+            data={this.state.data}
+            rowComponent={(dataItem, i) => <EventRow className='Table-row' rowClassName='Table-cell' key={i} event={dataItem} />}
+          />
+        }
       </div>
     );
   }

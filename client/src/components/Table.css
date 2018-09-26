@@ -1,9 +1,8 @@
 .Table {
-  width: 80%;
-  margin: 0 auto;
   padding-bottom: 2em;
   height: calc(100% - 160px); 
   overflow: hidden;
+  margin: 0 2em;
 }
 
 .Table-body {

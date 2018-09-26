@@ -59,9 +59,29 @@ input:disabled {
   flex-flow: column;
   justify-content: center;
   text-align: center;
+  margin: 0 2em;
 }
 
 .u-small {
   font-size: .75em;
   font-weight: 200;
+}
+
+.ViewList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ViewList-item {
+  cursor: pointer;
+}
+
+.ViewList-item:not(:first-child) {
+  margin-left: .5em;
+}
+
+.ViewList-item--active {
+  text-decoration: underline;
 }
