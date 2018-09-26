@@ -11,9 +11,9 @@ class App extends Component {
   
   componentDidMount() {
     this.callApi()
-      .then((res) => {
+      .then((response) => {
         // data cleanup
-        return res.events.map((e) => {
+        return response.events.map((e) => {
           return {
             ...e,
             momentDate: !!e.date ? moment(e.date, 'MMMM DD, YYYY') : null,
