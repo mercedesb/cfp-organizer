@@ -58,6 +58,11 @@ input:disabled {
   cursor: not-allowed;
 }
 
+.u-small {
+  font-size: .75em;
+  font-weight: 200;
+}
+
 .Table {
   display: flex;
   flex-direction: column;
@@ -96,6 +101,11 @@ input:disabled {
 
 .EventRow:nth-child(even) .EventRow-cell {
   background-color: #4d4443;
+}
+
+.EventRow-cell--location {
+  display: flex;
+  flex-direction: column;
 }
 
 .Table-headerCell, .EventRow-cell {

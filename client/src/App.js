@@ -8,7 +8,7 @@ class App extends Component {
   state = {
     data: [],
     filteredData: [],
-    filter: [],
+    filter: [], // [{ fields: [''], value: ''}]
     sort: {
       field: '',
       direction: ''
@@ -67,20 +67,16 @@ class App extends Component {
 
   filterBy = (event, keys) => {
     let filters = [...this.state.filter]
-    // if there's input, add a new filter for the input value
+    // remove existing filters for the keys
+    filters = filters.filter(oldFilter => !oldFilter.fields.every(f => keys.includes(f)))
+
     if (event.target.value) {
-      const newFilter = { fields: keys, value: event.target.value.toLowerCase() }
-      // remove existing filters for the keys
-      filters = filters.filter(oldFilter => !oldFilter.fields.every(f => keys.includes(f)))
-      filters.push(newFilter)
-    } else { // if there's no input value
-      // remove existing filters for the keys
-      filters = filters.filter(oldFilter => !oldFilter.fields.every(f => keys.includes(f)))
-    }
+      filters.push({ fields: keys, value: event.target.value.toLowerCase() })
+    } 
 
     function reducer(accumulator, filter) {
-      accumulator = accumulator.filter((cfpEvent) => {
-        return filter.fields.some(field => cfpEvent[field].toLowerCase().includes(filter.value))
+      accumulator = accumulator.filter((dataItem) => {
+        return filter.fields.some(field => dataItem[field].toLowerCase().includes(filter.value))
       })
       return accumulator
     }
