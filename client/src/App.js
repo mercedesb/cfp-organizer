@@ -8,6 +8,7 @@ class App extends Component {
   state = {
     data: [],
     filteredData: [],
+    filter: '',
     sort: {
       field: '',
       direction: ''
@@ -69,7 +70,7 @@ class App extends Component {
     arrayCopy = arrayCopy.filter((cfpEvent) => {
       return keys.some(key => cfpEvent[key].toLowerCase().includes(event.target.value.toLowerCase()))
     })
-    this.setState({ filteredData: arrayCopy })
+    this.setState({ filteredData: arrayCopy, filter: event.target.value ? event.target.name : '' })
   }
 
   render() {
@@ -88,14 +89,25 @@ class App extends Component {
                 <span>Name</span> 
                 <SortDirection name='name' sort={this.state.sort} />
               </div>
-              <input type='text' onChange={(event) => this.filterBy(event, ['name'])} placeholder='Search' />
+              <input 
+                type='text'
+                name='name' 
+                onChange={(event) => this.filterBy(event, ['name'])} 
+                disabled={this.state.filter && this.state.filter !== 'name'} 
+                placeholder='Search' 
+              />
             </div>
             <div className="Table-headerCell">
               <div className="Sortable" onClick={() => this.sortBy('location', 'location')}>
                 <span >Location</span> 
                 <SortDirection name='location' sort={this.state.sort} />
               </div>
-              <input type='text' onChange={(event) => this.filterBy(event, ['location', 'country', 'countryCode', 'city'])} placeholder='Search'/>
+              <input 
+                type='text' 
+                name='location'
+                onChange={(event) => this.filterBy(event, ['location', 'country', 'countryCode', 'city'])} 
+                disabled={this.state.filter && this.state.filter !== 'location'} 
+                placeholder='Search'/>
             </div>
             <div className="Table-headerCell">
               <div className="Sortable" onClick={() => this.sortBy('momentDate', 'date')}>
@@ -111,7 +123,12 @@ class App extends Component {
             </div>
             <div className="Table-headerCell">
               <span>Event Tags</span>
-              <input type='text' onChange={(event) => this.filterBy(event, ['eventTags'])} placeholder='Search'/>
+              <input 
+                type='text' 
+                name='eventTags'
+                onChange={(event) => this.filterBy(event, ['eventTags'])} 
+                disabled={this.state.filter && this.state.filter !== 'eventTags'} 
+                placeholder='Search'/>
             </div>
           </header>
           <div className="Table-body">

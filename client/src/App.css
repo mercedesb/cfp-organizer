@@ -54,6 +54,10 @@ input[type=email], input[type=number], input[type=password], input[type=tel], in
   outline: none;
 }
 
+input:disabled {
+  cursor: not-allowed;
+}
+
 .Table {
   display: flex;
   flex-direction: column;
