@@ -1,33 +1,29 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Poppins:200,400,600);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:200,400,700);
 
-body {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  line-height: 1.42em;
-  color:#fff;
-  background-color:#3f3837;
+html, body, #root, .App {
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
 
-.App-header {
-  text-align:center;
-  margin: 4em 2em 2em;
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.42em;
+  color: #222;
 }
 
 h1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2em;
-  font-weight: 400;
-  color: #db9408;
+  font-weight:400;
 }
 
 h2 {
   font-size: 1em;
-  color: #e1727e;
+  font-weight:700;
 }
 
 a {
-  color: #e1727e;
+  color: #0074d9;
 }
 
 input[type=email], input[type=number], input[type=password], input[type=tel], input[type=text], input[type=url], textarea{
@@ -57,63 +53,63 @@ input:disabled {
   cursor: not-allowed;
 }
 
+.App-header {
+  height: 160px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  text-align: center;
+}
+
 .u-small {
   font-size: .75em;
   font-weight: 200;
 }
 
 .Table {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
   width: 80%;
   margin: 0 auto;
+  padding-bottom: 2em;
+  height: calc(100% - 160px); 
+  overflow: hidden;
 }
 
-.Table-header {
+.Table-body {
+  height: calc(100% - 140px); 
+  overflow-y: scroll;
+}
+
+.Table-row {
   display: flex;
-  color: #fff;
 }
 
-.Table-headerCell {
+.Table-cell {
   flex: 1;
-  background-color: #4d4443;
-  font-weight: bold;
-  color: #b9892a;
-  border: 1px solid #3f3837;
-}
-
-.EventRow {
-  display: flex;
-}
-
-.EventRow-cell {
-  flex: 1;
-  font-weight: normal;
-  border: 1px solid #3f3837;
-  border-radius: 2px;
-}
-
-.EventRow .EventRow-cell {
-  background-color: #5a504f;
-}
-
-.EventRow:nth-child(even) .EventRow-cell {
-  background-color: #4d4443;
-}
-
-.EventRow-cell--location {
-  display: flex;
-  flex-direction: column;
-}
-
-.Table-headerCell, .EventRow-cell {
+  border: 1px solid #ccc;
   padding: 1em 1.5em;
 }
 
+.Table-row--header {
+  height: 100px;
+}
+
+.Table-cell--header {
+  font-weight: 700;
+}
+
+.Table-row:nth-child(even) .Table-cell {
+  background-color: #eee;
+}
+
+.Table-cell--location {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (max-width: 1000px) {
-.Table-headerCell:last-child,
-.EventRow-cell:last-child { display: none; }
+  .Table-cell:last-child { 
+    display: none; 
+  }
 }
 
 .Sortable {
@@ -139,9 +135,9 @@ input:disabled {
 }
 
 .Arrow--up {
-  border-bottom: 10px solid #3f3837;
+  border-bottom: 10px solid #999;
 }
 
 .Arrow--down {
-  border-top: 10px solid #3f3837;
+  border-top: 10px solid #999;
 }

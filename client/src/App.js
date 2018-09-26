@@ -87,7 +87,9 @@ class App extends Component {
   }
 
   render() {
-    const rows = this.state.filteredData.map((papercallEvent, i) => <EventRow key={i} {...papercallEvent} />);
+    const rows = this.state.filteredData.map((papercallEvent, i) => {
+      return <EventRow className='Table-row' rowClassName='Table-cell' key={i} event={papercallEvent} />
+    });
 
     return (
       <div className="App">
@@ -96,8 +98,8 @@ class App extends Component {
           <h2>Sort and filter Papercall CFPs</h2>
         </div>
         <div className="Table">
-          <header className="Table-header">
-            <div className="Table-headerCell">
+          <header className="Table-row Table-row--header">
+            <div className="Table-cell Table-cell--header">
               <div className="Sortable" onClick={() => this.sortBy('name', 'name')}>
                 <span>Name</span> 
                 <SortDirection name='name' sort={this.state.sort} />
@@ -109,7 +111,7 @@ class App extends Component {
                 placeholder='Search' 
               />
             </div>
-            <div className="Table-headerCell">
+            <div className="Table-cell Table-cell--header">
               <div className="Sortable" onClick={() => this.sortBy('location', 'location')}>
                 <span >Location</span> 
                 <SortDirection name='location' sort={this.state.sort} />
@@ -120,19 +122,19 @@ class App extends Component {
                 onChange={(event) => this.filterBy(event, ['location', 'continent', 'country', 'countryCode', 'city'])} 
                 placeholder='Search'/>
             </div>
-            <div className="Table-headerCell">
+            <div className="Table-cell Table-cell--header">
               <div className="Sortable" onClick={() => this.sortBy('momentDate', 'date')}>
                 <span >Event Date</span>
                 <SortDirection name='date' sort={this.state.sort} />
               </div>
             </div>
-            <div className="Table-headerCell">
+            <div className="Table-cell Table-cell--header">
               <div className="Sortable" onClick={() => this.sortBy('momentCfpClose', 'cfpClose')}>
               <span >CFP Close Date</span>
               <SortDirection name='cfpClose' sort={this.state.sort} />
               </div>
             </div>
-            <div className="Table-headerCell">
+            <div className="Table-cell Table-cell--header">
               <span>Event Tags</span>
               <input 
                 type='text' 
