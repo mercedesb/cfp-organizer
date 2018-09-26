@@ -109,17 +109,26 @@ input[type=email], input[type=number], input[type=password], input[type=tel], in
   justify-content: space-between;
 }
 
+.Sortable-unsorted {
+  display: flex;
+  flex-direction: column;
+}
+
+.Sortable-unsorted .Arrow {
+  margin-bottom: 3px;
+}
+
 .Arrow {
   width: 0; 
   height: 0; 
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
 }
 
 .Arrow--up {
-  border-bottom: 12px solid #3f3837;
+  border-bottom: 10px solid #3f3837;
 }
 
 .Arrow--down {
-  border-top: 12px solid #3f3837;
+  border-top: 10px solid #3f3837;
 }
