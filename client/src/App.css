@@ -72,10 +72,7 @@ input[type=email], input[type=number], input[type=password], input[type=tel], in
   background-color: #4d4443;
   font-weight: bold;
   color: #b9892a;
-}
-
-.Table-headerCell--sortable span {
-  cursor: pointer;
+  border: 1px solid #3f3837;
 }
 
 .EventRow {
@@ -99,4 +96,30 @@ input[type=email], input[type=number], input[type=password], input[type=tel], in
 
 .Table-headerCell, .EventRow-cell {
   padding: 1em 1.5em;
+}
+
+@media (max-width: 1000px) {
+.Table-headerCell:last-child,
+.EventRow-cell:last-child { display: none; }
+}
+
+.Sortable {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Arrow {
+  width: 0; 
+  height: 0; 
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+}
+
+.Arrow--up {
+  border-bottom: 12px solid #3f3837;
+}
+
+.Arrow--down {
+  border-top: 12px solid #3f3837;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
+import { SortDirection } from './SortDirection.js';
 import { EventRow } from './EventRow.js';
 import './App.css';
 
@@ -58,13 +59,15 @@ class App extends Component {
     };
   }
 
-  sortBy = (key) => {
+  sortBy = (sortKey, stateKey) => {
     let arrayCopy = [...this.state.filteredData];
-    const sortAsc = !this.state.sortAsc[key];
-    arrayCopy.sort(this.compareBy(key, sortAsc));
+    const sortAsc = !this.state.sortAsc[stateKey];
+    arrayCopy.sort(this.compareBy(sortKey, sortAsc));
+
     // need to set state of sort
     let newSortAscState = { ...this.state.sortAsc };
-    newSortAscState[key] = sortAsc;
+      newSortAscState[stateKey] = sortAsc; 
+   
     this.setState({ filteredData: arrayCopy, sortAsc: newSortAscState });
   }
 
@@ -87,23 +90,35 @@ class App extends Component {
         </div>
         <div className="Table">
           <header className="Table-header">
-            <div className="Table-headerCell Table-headerCell--sortable">
-              <span onClick={() => this.sortBy('name')}>Name</span> 
-              <input type='text' onChange={(event) => this.filterBy(event, ['name'])} />
+            <div className="Table-headerCell">
+              <div className="Sortable" onClick={() => this.sortBy('name', 'name')}>
+                <span>Name</span> 
+                <SortDirection sortAsc={this.state.sortAsc.name} />
+              </div>
+              <input type='text' onChange={(event) => this.filterBy(event, ['name'])} placeholder='Search' />
             </div>
-            <div className="Table-headerCell Table-headerCell--sortable">
-              <span onClick={() => this.sortBy('location')}>Location</span> 
-              <input type='text' onChange={(event) => this.filterBy(event, ['location', 'country', 'countryCode', 'city'])} />
+            <div className="Table-headerCell">
+              <div className="Sortable" onClick={() => this.sortBy('location', 'location')}>
+                <span >Location</span> 
+                <SortDirection sortAsc={this.state.sortAsc.location} />
+              </div>
+              <input type='text' onChange={(event) => this.filterBy(event, ['location', 'country', 'countryCode', 'city'])} placeholder='Search'/>
             </div>
-            <div className="Table-headerCell Table-headerCell--sortable">
-              <span onClick={() => this.sortBy('momentDate')}>Event Date</span>
+            <div className="Table-headerCell">
+              <div className="Sortable" onClick={() => this.sortBy('momentDate', 'date')}>
+                <span >Event Date</span>
+                <SortDirection sortAsc={this.state.sortAsc.date} />
+              </div>
             </div>
-            <div className="Table-headerCell Table-headerCell--sortable">
-              <span onClick={() => this.sortBy('momentCfpClose')}>CFP Close Date</span>
+            <div className="Table-headerCell">
+              <div className="Sortable" onClick={() => this.sortBy('momentCfpClose', 'cfpClose')}>
+              <span >CFP Close Date</span>
+              <SortDirection sortAsc={this.state.sortAsc.cfpClose} />
+              </div>
             </div>
             <div className="Table-headerCell">
               <span>Event Tags</span>
-              <input type='text' onChange={(event) => this.filterBy(event, ['eventTags'])} />
+              <input type='text' onChange={(event) => this.filterBy(event, ['eventTags'])} placeholder='Search'/>
             </div>
           </header>
           <div className="Table-body">
