@@ -8,7 +8,7 @@ class App extends Component {
   state = {
     data: [],
     filteredData: [],
-    filter: '',
+    filter: [],
     sort: {
       field: '',
       direction: ''
@@ -66,11 +66,28 @@ class App extends Component {
   }
 
   filterBy = (event, keys) => {
-    let arrayCopy = [...this.state.data];
-    arrayCopy = arrayCopy.filter((cfpEvent) => {
-      return keys.some(key => cfpEvent[key].toLowerCase().includes(event.target.value.toLowerCase()))
-    })
-    this.setState({ filteredData: arrayCopy, filter: event.target.value ? event.target.name : '' })
+    let filters = [...this.state.filter]
+    // if there's input, add a new filter for the input value
+    if (event.target.value) {
+      const newFilter = { fields: keys, value: event.target.value.toLowerCase() }
+      // remove existing filters for the keys
+      filters = filters.filter(oldFilter => !oldFilter.fields.every(f => keys.includes(f)))
+      filters.push(newFilter)
+    } else { // if there's no input value
+      // remove existing filters for the keys
+      filters = filters.filter(oldFilter => !oldFilter.fields.every(f => keys.includes(f)))
+    }
+
+    function reducer(accumulator, filter) {
+      accumulator = accumulator.filter((cfpEvent) => {
+        return filter.fields.some(field => cfpEvent[field].toLowerCase().includes(filter.value))
+      })
+      return accumulator
+    }
+
+    const filteredData = filters.reduce(reducer, [...this.state.data])
+
+    this.setState({ filteredData, filter: filters})
   }
 
   render() {
@@ -93,7 +110,6 @@ class App extends Component {
                 type='text'
                 name='name' 
                 onChange={(event) => this.filterBy(event, ['name'])} 
-                disabled={this.state.filter && this.state.filter !== 'name'} 
                 placeholder='Search' 
               />
             </div>
@@ -106,7 +122,6 @@ class App extends Component {
                 type='text' 
                 name='location'
                 onChange={(event) => this.filterBy(event, ['location', 'country', 'countryCode', 'city'])} 
-                disabled={this.state.filter && this.state.filter !== 'location'} 
                 placeholder='Search'/>
             </div>
             <div className="Table-headerCell">
@@ -127,7 +142,6 @@ class App extends Component {
                 type='text' 
                 name='eventTags'
                 onChange={(event) => this.filterBy(event, ['eventTags'])} 
-                disabled={this.state.filter && this.state.filter !== 'eventTags'} 
                 placeholder='Search'/>
             </div>
           </header>
