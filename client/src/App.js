@@ -6,36 +6,8 @@ import './App.css';
 
 class App extends Component {
   state = {
-    data: []
-  }
-  
-  componentDidMount() {
-    this.callApi()
-      .then((response) => {
-        // data cleanup
-        return response.events.map((e) => {
-          return {
-            ...e,
-            momentDate: !!e.date ? moment(e.date, 'MMMM DD, YYYY') : null,
-            momentCfpClose: !!e.cfpClose ? moment(e.cfpClose, 'MMMM DD, YYYY HH: mm UTC') : null
-          }
-        })
-      })
-      .then(events => this.setState({ data: events }))
-      .catch(err => console.log(err));
-  }
-
-  callApi = async () => {
-    const response = await fetch('/api/openCfps');
-    const body = await response.json();
-
-    if (response.status !== 200) throw Error(body.message);
-
-    return body;
-  };
-
-  tableHeaders = () => {
-    return [
+    data: [], 
+    tableHeaders: [
       {
         name: 'name',
         label: 'Name',
@@ -71,10 +43,31 @@ class App extends Component {
       }
     ]
   }
-
-  tableRow = (dataItem, i) => {
-    return <EventRow className='Table-row' rowClassName='Table-cell' key={i} event={dataItem} />;
+  
+  componentDidMount() {
+    this.callApi()
+      .then((response) => {
+        // data cleanup
+        return response.events.map((e) => {
+          return {
+            ...e,
+            momentDate: !!e.date ? moment(e.date, 'MMMM DD, YYYY') : null,
+            momentCfpClose: !!e.cfpClose ? moment(e.cfpClose, 'MMMM DD, YYYY HH: mm UTC') : null
+          }
+        })
+      })
+      .then(events => this.setState({ data: events }))
+      .catch(err => console.log(err));
   }
+
+  callApi = async () => {
+    const response = await fetch('/api/openCfps');
+    const body = await response.json();
+
+    if (response.status !== 200) throw Error(body.message);
+
+    return body;
+  };
 
   render() {
     return (
@@ -84,9 +77,9 @@ class App extends Component {
           <h2>Sort and filter Papercall CFPs</h2>
         </div>
         <Table 
-          headers={this.tableHeaders()}
+          headers={this.state.tableHeaders}
           data={this.state.data}
-          rowComponent={this.tableRow}
+          rowComponent={(dataItem, i) => <EventRow className='Table-row' rowClassName='Table-cell' key={i} event={dataItem} />}
         />
       </div>
     );
