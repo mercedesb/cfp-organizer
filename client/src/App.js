@@ -1,20 +1,14 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import { SortDirection } from './SortDirection.js';
-import { EventRow } from './EventRow.js';
+import { Table } from './components/Table.js';
+import { EventRow } from './components/EventRow.js';
 import './App.css';
 
 class App extends Component {
   state = {
-    data: [],
-    filteredData: [],
-    filter: [], // [{ fields: [''], value: ''}]
-    sort: {
-      field: '',
-      direction: ''
-    }
-  };
-
+    data: []
+  }
+  
   componentDidMount() {
     this.callApi()
       .then((res) => {
@@ -27,7 +21,7 @@ class App extends Component {
           }
         })
       })
-      .then(events => this.setState({ data: events, filteredData: events }))
+      .then(events => this.setState({ data: events }))
       .catch(err => console.log(err));
   }
 
@@ -40,113 +34,60 @@ class App extends Component {
     return body;
   };
 
-  compareBy = (key, sortAsc) => {
-    let comparator;
-    if (sortAsc) comparator = 1;
-    if (!sortAsc) comparator = -1;
-
-    return function (a, b) {
-      let aValue = a[key];
-      let bValue = b[key];
-      if (typeof (aValue) === "string") aValue = aValue.toLowerCase();
-      if (typeof (bValue) === "string") bValue = bValue.toLowerCase();
-
-      if (aValue < bValue) return comparator * -1;
-      if (aValue > bValue) return comparator * 1;
-      return 0;
-    };
+  tableHeaders = () => {
+    return [
+      {
+        name: 'name',
+        label: 'Name',
+        sortable: true,
+        filterable: true,
+      },
+      {
+        name: 'location',
+        label: 'Location',
+        sortable: true,
+        filterable: true,
+        filterKeys: ['location', 'continent', 'country', 'countryCode', 'city']
+      },
+      {
+        name: 'date',
+        label: 'Date',
+        sortable: true,
+        sortKey: 'momentDate',
+        filterable: false,
+      },
+      {
+        name: 'cfpClose',
+        label: 'CFP Close Date',
+        sortable: true,
+        sortKey: 'momentCfpClose',
+        filterable: false,
+      },
+      {
+        name: 'eventTags',
+        label: 'Event Tags',
+        sortable: false,
+        filterable: true,
+      }
+    ]
   }
 
-  sortBy = (sortKey, stateKey) => {
-    let arrayCopy = [...this.state.filteredData];
-    const sortAsc = this.state.sort.field === stateKey ? this.state.sort.direction !== 'asc' : true;
-    arrayCopy.sort(this.compareBy(sortKey, sortAsc));
-
-    this.setState({ filteredData: arrayCopy, sort: { field: stateKey, direction: sortAsc ? 'asc' : 'desc' } });
-  }
-
-  filterBy = (event, keys) => {
-    let filters = [...this.state.filter]
-    // remove existing filters for the keys
-    filters = filters.filter(oldFilter => !oldFilter.fields.every(f => keys.includes(f)))
-
-    if (event.target.value) {
-      filters.push({ fields: keys, value: event.target.value.toLowerCase() })
-    } 
-
-    function reducer(accumulator, filter) {
-      accumulator = accumulator.filter((dataItem) => {
-        return filter.fields.some(field => dataItem[field].toLowerCase().includes(filter.value))
-      })
-      return accumulator
-    }
-
-    const filteredData = filters.reduce(reducer, [...this.state.data])
-
-    this.setState({ filteredData, filter: filters})
+  tableRow = (dataItem, i) => {
+    return <EventRow className='Table-row' rowClassName='Table-cell' key={i} event={dataItem} />;
   }
 
   render() {
-    const rows = this.state.filteredData.map((papercallEvent, i) => {
-      return <EventRow className='Table-row' rowClassName='Table-cell' key={i} event={papercallEvent} />
-    });
-
     return (
       <div className="App">
         <div className="App-header">
           <h1>CFP Organizer</h1>
           <h2>Sort and filter Papercall CFPs</h2>
         </div>
-        <div className="Table">
-          <header className="Table-row Table-row--header">
-            <div className="Table-cell Table-cell--header">
-              <div className="Sortable" onClick={() => this.sortBy('name', 'name')}>
-                <span>Name</span> 
-                <SortDirection name='name' sort={this.state.sort} />
-              </div>
-              <input 
-                type='text'
-                name='name' 
-                onChange={(event) => this.filterBy(event, ['name'])} 
-                placeholder='Search' 
-              />
-            </div>
-            <div className="Table-cell Table-cell--header">
-              <div className="Sortable" onClick={() => this.sortBy('location', 'location')}>
-                <span >Location</span> 
-                <SortDirection name='location' sort={this.state.sort} />
-              </div>
-              <input 
-                type='text' 
-                name='location'
-                onChange={(event) => this.filterBy(event, ['location', 'continent', 'country', 'countryCode', 'city'])} 
-                placeholder='Search'/>
-            </div>
-            <div className="Table-cell Table-cell--header">
-              <div className="Sortable" onClick={() => this.sortBy('momentDate', 'date')}>
-                <span >Event Date</span>
-                <SortDirection name='date' sort={this.state.sort} />
-              </div>
-            </div>
-            <div className="Table-cell Table-cell--header">
-              <div className="Sortable" onClick={() => this.sortBy('momentCfpClose', 'cfpClose')}>
-              <span >CFP Close Date</span>
-              <SortDirection name='cfpClose' sort={this.state.sort} />
-              </div>
-            </div>
-            <div className="Table-cell Table-cell--header">
-              <span>Event Tags</span>
-              <input 
-                type='text' 
-                name='eventTags'
-                onChange={(event) => this.filterBy(event, ['eventTags'])} 
-                placeholder='Search'/>
-            </div>
-          </header>
-          <div className="Table-body">
-            {rows}
-          </div>
-        </div>
+        <Table 
+          headers={this.tableHeaders()}
+          data={this.state.data}
+          rowComponent={this.tableRow}
+        />
       </div>
     );
   }
