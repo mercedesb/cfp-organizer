@@ -22,7 +22,6 @@ function geocode(data) {
         if (geocodeResponse && geocodeResponse.length > 0) {
           geoCodeData = geocodeResponse[0];
         } 
-        console.log(geoCodeData);
 
         dataItem['lat'] = geoCodeData.latitude || '';
         dataItem['lng'] = geoCodeData.longitude || '';

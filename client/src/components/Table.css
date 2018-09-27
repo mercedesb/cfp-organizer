@@ -1,12 +1,12 @@
 .Table {
   padding-bottom: 2em;
-  height: calc(100% - 160px); 
+  height: calc(100% - 200px); 
   overflow: hidden;
   margin: 0 2em;
 }
 
 .Table-body {
-  height: calc(100% - 140px); 
+  height: calc(100% - 60px); 
   overflow-y: scroll;
 }
 
@@ -47,6 +47,7 @@
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+  height: 30px;
 }
 
 .Sortable-unsorted {

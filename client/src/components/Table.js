@@ -4,8 +4,7 @@ import { TableHeader } from './TableHeader.js';
 
 export class Table extends Component {
   state = {
-    data: [],
-    filteredData: [],
+    filteredData: null, //[]
     filter: [], // [{ fields: [''], value: ''}]
     sort: {
       field: '',
@@ -14,7 +13,7 @@ export class Table extends Component {
   }
 
   static getDerivedStateFromProps(props, state) {
-    return { data: props.data, filteredData: props.data }
+    return { filteredData: state.filteredData || props.data }
   }
 
   compareBy = (key, sortAsc) => {
@@ -35,7 +34,7 @@ export class Table extends Component {
   }
 
   sortBy = (sortKey) => {
-    let arrayCopy = [...this.state.data];
+    let arrayCopy = [...this.state.filteredData];
     const sortAsc = this.state.sort.field === sortKey ? this.state.sort.direction !== 'asc' : true;
     arrayCopy.sort(this.compareBy(sortKey, sortAsc));
 
@@ -58,7 +57,7 @@ export class Table extends Component {
       return accumulator
     }
 
-    const filteredData = filters.reduce(reducer, [...this.state.data])
+    const filteredData = filters.reduce(reducer, [...this.props.data])
 
     this.setState({ filteredData, filter: filters })
   }
@@ -81,7 +80,7 @@ export class Table extends Component {
           }
         </header>
         <div className="Table-body">
-         { this.state.filteredData.map((dataItem, i) => this.props.rowComponent(dataItem, i)) }
+          {this.state.filteredData && this.state.filteredData.map((dataItem, i) => this.props.rowComponent(dataItem, i)) }
         </div>
       </div>
     )

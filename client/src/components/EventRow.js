@@ -9,6 +9,6 @@ export const EventRow = ({ className, rowClassName, event }) => (
     </div>
     <div className={rowClassName}>{event.date}</div>
     <div className={rowClassName}><a href={event.cfpUrl}>{event.cfpClose}</a></div>
-    <div className={rowClassName}>{event.eventTags}</div>
+    <div className={`${rowClassName} u-small`}>{event.eventTags}</div>
   </div>
 );
