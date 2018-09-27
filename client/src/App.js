@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import moment from 'moment';
 import { Table } from './components/Table.js';
 import { EventRow } from './components/EventRow.js';
+import { Map } from './components/Map.js';
 import './App.css';
 
 class App extends Component {
   state = {
     data: [], 
-    activeView: 'list',
+    activeView: 'map',
     tableHeaders: [
       {
         name: 'name',
@@ -91,6 +92,9 @@ class App extends Component {
             data={this.state.data}
             rowComponent={(dataItem, i) => <EventRow className='Table-row' rowClassName='Table-cell' key={i} event={dataItem} />}
           />
+        }
+        { this.state.activeView === 'map' &&
+          <Map data={this.state.data}/>
         }
       </div>
     );

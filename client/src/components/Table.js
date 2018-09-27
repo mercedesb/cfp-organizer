@@ -15,7 +15,6 @@ export class Table extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.data && nextProps.data.length > 0) {
-      console.log(nextProps.data)
       this.setState({data: nextProps.data, filteredData: nextProps.data })
     }
   }

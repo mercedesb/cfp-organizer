@@ -22,7 +22,10 @@ function geocode(data) {
         if (geocodeResponse && geocodeResponse.length > 0) {
           geoCodeData = geocodeResponse[0];
         } 
+        console.log(geoCodeData);
 
+        dataItem['lat'] = geoCodeData.latitude || '';
+        dataItem['lng'] = geoCodeData.longitude || '';
         dataItem['city'] = geoCodeData.city || '';
         dataItem['country'] = geoCodeData.country || '';
         dataItem['countryCode'] = geoCodeData.countryCode || '';
