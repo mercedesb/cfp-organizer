@@ -2,12 +2,11 @@ var NodeGeocoder = require('node-geocoder');
 
 var continents = require('../data/continents.json');
 var countries = require('../data/countries.json');
-var hereConfig = require('../hereConfig.json');
 
 var options = {
   provider: 'here',
-  appId: hereConfig.appId,
-  appCode: hereConfig.appCode,
+  appId: process.env.NODE_ENV !== 'production' ? require('../hereConfig.json').appId : process.env.HERE_APP_ID,
+  appCode: process.env.NODE_ENV !== 'production' ? require('../hereConfig.json').appCode : process.env.HERE_APP_CODE,
   language: 'en'
 };
 
