@@ -38,8 +38,9 @@ To run the client and server separately
 
 `yarn server` and `yarn client`
 
-## Styles
-The styles used in this app are heavily inspired by [Pablo García Fernández](https://codepen.io/heypablete/pen/qdIsm)
+## Credits
+- [Loading spinner](https://loading.io/css/)
+- [Map](https://github.com/PaulLeCam/react-leaflet)
 
 ## React README
 The boilerplate create-react-app README can be found [here](client/README.md).
