@@ -13,9 +13,11 @@ yarn
 cd client && yarn
 ```
 
-This project does require a free account with [Here](https://developer.here.com/) to use their Geocoder API. Create an account, then create a project and generate an App Id and App Code for JavaScript/REST APIs.
+This project depends on [node-geocoder](https://github.com/nchaulet/node-geocoder) and requires  a free account with [Here](https://developer.here.com/) to use their Geocoder API. If you would prefer to use one of the other supported services such as Google, you can change that in the geocoder options in `geocode.js`.
 
-Put this info in a file in the root directory called `hereConfig.json`.
+To use Here, create an account, then create a project and generate an App Id and App Code for JavaScript/REST APIs.
+
+Put this info in a file in the root directory called `hereConfig.json`. 
 
 It should look like this
 ```
@@ -25,7 +27,7 @@ It should look like this
 }
 ```
 
-This project depends on [node-geocoder](https://github.com/nchaulet/node-geocoder) so if you would prefer to use one of the other supported services such as Google, you can change that in the geocoder options in `server.js`.
+When running locally the code looks for this json file. In production, use environment variables.
 
 ## To Run
 To run in a dev environment
