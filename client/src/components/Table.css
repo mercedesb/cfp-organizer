@@ -1,6 +1,6 @@
 .Table {
-  padding-bottom: 2em;
-  margin: 0 2em;
+  padding-bottom: 20px;
+  margin: 0 20px;
 }
 
 .Table-row {
@@ -10,7 +10,7 @@
 .Table-cell {
   flex: 1;
   border: 1px solid #ccc;
-  padding: 1em 1.5em;
+  padding: 10px 20px;
 }
 
 .Table-row--header {

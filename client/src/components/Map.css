@@ -1,5 +1,5 @@
 .Map {
-  padding-bottom: 2em;
+  padding-bottom: 20px;
   height: calc(100% - 200px); 
-  margin: 0 2em;
+  margin: 0 20px;
 }
