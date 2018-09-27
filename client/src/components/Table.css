@@ -1,13 +1,6 @@
 .Table {
   padding-bottom: 2em;
-  height: calc(100% - 200px); 
-  overflow: hidden;
   margin: 0 2em;
-}
-
-.Table-body {
-  height: calc(100% - 60px); 
-  overflow-y: scroll;
 }
 
 .Table-row {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
+import { Loading } from './components/Loading.js';
 import { Table } from './components/Table.js';
 import { EventRow } from './components/EventRow.js';
 import { Map } from './components/Map.js';
@@ -10,6 +11,7 @@ class App extends Component {
   state = {
     data: null, 
     activeView: 'list',
+    loading: true,
     tableHeaders: [
       {
         name: 'name',
@@ -59,7 +61,7 @@ class App extends Component {
           }
         })
       })
-      .then(events => this.setState({ data: events }))
+      .then(events => this.setState({ data: events, loading: false }))
       .catch(err => console.log(err));
   }
 
@@ -87,15 +89,18 @@ class App extends Component {
             <li className={`ViewList-item ${this.state.activeView === 'map' ? 'ViewList-item--active' : ''}`} onClick={() => this.setActiveView('map')}>Map</li>
           </ul>
         </div>
-        { this.state.activeView === 'list' &&
-          <Table 
+        { this.state.loading &&
+          <Loading />
+        }
+        { !this.state.loading && this.state.activeView === 'list' &&
+          <Table
             headers={this.state.tableHeaders}
             data={this.state.data}
             rowComponent={(dataItem, i) => <EventRow className='Table-row' rowClassName='Table-cell' key={i} event={dataItem} />}
           />
         }
-        { this.state.activeView === 'map' &&
-          <Map 
+        { !this.state.loading && this.state.activeView === 'map' &&
+          <Map
             data={this.state.data}
             popupComponent={(dataItem) => <EventPopup event={dataItem} />}
           />
