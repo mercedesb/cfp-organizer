@@ -3,6 +3,7 @@ import moment from 'moment';
 import { Loading } from './components/Loading.js';
 import { Table } from './components/Table.js';
 import { EventRow } from './components/EventRow.js';
+import { MobileEventRow } from './components/MobileEventRow.js';
 import { Map } from './components/Map.js';
 import { EventPopup } from './components/EventPopup.js';
 import './App.css';
@@ -46,6 +47,16 @@ class App extends Component {
         sortable: false,
         filterable: true,
       }
+    ],
+    mobileHeaders: [
+      {
+        name: 'events',
+        label: 'Events',
+        sortable: true,
+        sortKey: 'name',
+        filterable: true,
+        filterKeys: ['name', 'location', 'continent', 'country', 'countryCode', 'city', 'eventTags']
+      }
     ]
   }
   
@@ -53,11 +64,12 @@ class App extends Component {
     this.callApi()
       .then((response) => {
         // data cleanup
-        return response.events.map((e) => {
+        return response.events.map((e, i) => {
           return {
             ...e,
             momentDate: !!e.date ? moment(e.date, 'MMMM DD, YYYY') : null,
-            momentCfpClose: !!e.cfpClose ? moment(e.cfpClose, 'MMMM DD, YYYY HH: mm UTC') : null
+            momentCfpClose: !!e.cfpClose ? moment(e.cfpClose, 'MMMM DD, YYYY HH: mm UTC') : null,
+            key: i
           }
         })
       })
@@ -74,8 +86,16 @@ class App extends Component {
     return body;
   };
 
-  setActiveView(view) {
-    this.setState({activeView: view})
+  setActiveView = (view) => {
+    this.setState({ activeView: view })
+  }
+
+  setActiveDataItem = (dataItemKey) => {
+    if (this.state.activeDataItem === dataItemKey) {
+      this.setState({ activeDataItem: null })
+    } else {
+      this.setState({ activeDataItem: dataItemKey })
+    }
   }
 
   render() {
@@ -93,11 +113,29 @@ class App extends Component {
           <Loading />
         }
         { !this.state.loading && this.state.activeView === 'list' &&
-          <Table
-            headers={this.state.tableHeaders}
-            data={this.state.data}
-            rowComponent={(dataItem, i) => <EventRow className='Table-row' rowClassName='Table-cell' key={i} event={dataItem} />}
-          />
+          <React.Fragment>
+            <Table
+              className='Table--mobile'
+              headers={this.state.mobileHeaders}
+              data={this.state.data}
+              rowComponent={(dataItem, i) => (
+                <MobileEventRow 
+                  className='' 
+                  cellClassName='MobileCell' 
+                  key={dataItem.key} 
+                  event={dataItem} 
+                  isActive={this.state.activeDataItem === dataItem.key}
+                  onClick={() => this.setActiveDataItem(dataItem.key)} 
+                />
+              )}
+            />
+  
+            <Table
+              headers={this.state.tableHeaders}
+              data={this.state.data}
+              rowComponent={(dataItem, i) => <EventRow className='Table-row' cellClassName='Table-cell' key={dataItem.key} event={dataItem} />}
+            />
+          </React.Fragment>
         }
         { !this.state.loading && this.state.activeView === 'map' &&
           <Map

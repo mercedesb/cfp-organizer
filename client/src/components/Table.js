@@ -64,7 +64,7 @@ export class Table extends Component {
 
   render() {
     return (
-      <div className="Table">
+      <div className={`Table ${this.props.className}`}>
         <header className="Table-row Table-row--header">
           { this.props.headers.map((header, i) => {
             return (
