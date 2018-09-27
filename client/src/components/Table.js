@@ -13,10 +13,8 @@ export class Table extends Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.data && nextProps.data.length > 0) {
-      this.setState({data: nextProps.data, filteredData: nextProps.data })
-    }
+  static getDerivedStateFromProps(props, state) {
+    return { data: props.data, filteredData: props.data }
   }
 
   compareBy = (key, sortAsc) => {
@@ -66,7 +64,6 @@ export class Table extends Component {
   }
 
   render() {
-
     return (
       <div className="Table">
         <header className="Table-row Table-row--header">

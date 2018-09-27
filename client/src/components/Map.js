@@ -7,11 +7,10 @@ export class Map extends Component {
     data: []
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.data && nextProps.data.length > 0) {
-      this.setState({ data: nextProps.data })
-    }
+  static getDerivedStateFromProps(props, state) {
+    return { data: props.data }
   }
+
   render() {
     const position = [20, -20];
     return (
