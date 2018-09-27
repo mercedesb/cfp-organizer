@@ -3,12 +3,13 @@ import moment from 'moment';
 import { Table } from './components/Table.js';
 import { EventRow } from './components/EventRow.js';
 import { Map } from './components/Map.js';
+import { EventPopup } from './components/EventPopup.js';
 import './App.css';
 
 class App extends Component {
   state = {
     data: [], 
-    activeView: 'map',
+    activeView: 'list',
     tableHeaders: [
       {
         name: 'name',
@@ -94,7 +95,10 @@ class App extends Component {
           />
         }
         { this.state.activeView === 'map' &&
-          <Map data={this.state.data}/>
+          <Map 
+            data={this.state.data}
+            popupComponent={(dataItem) => <EventPopup event={dataItem} />}
+          />
         }
       </div>
     );

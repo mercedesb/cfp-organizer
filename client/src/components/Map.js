@@ -25,9 +25,7 @@ export class Map extends Component {
           return (
             <Marker position={[dataItem.lat, dataItem.lng]} key={i}>
               <Popup>
-                <a href={dataItem.url}>{dataItem.name}</a> - {dataItem.date}<br/>
-                {dataItem.city}, {dataItem.country}<br/>
-                <a href={dataItem.cfpUrl}>CFP Closes on {dataItem.cfpClose}</a>
+                {this.props.popupComponent(dataItem)}
               </Popup>
             </Marker>
           )
