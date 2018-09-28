@@ -68,7 +68,7 @@ class App extends Component {
           return {
             ...e,
             momentDate: !!e.date ? moment(e.date, 'MMMM DD, YYYY') : null,
-            momentCfpClose: !!e.cfpClose ? moment(e.cfpClose, 'MMMM DD, YYYY HH: mm UTC') : null,
+            momentCfpClose: !!e.cfpClose ? moment(e.cfpClose, 'MMMM DD, YYYY HH:mm UTC') : null,
             key: i
           }
         })

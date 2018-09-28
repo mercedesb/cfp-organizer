@@ -1,0 +1,365 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="App-header"
+>
+          <h1>
+                    CFP Organizer
+          </h1>
+          <h2>
+                    Sort and filter Papercall CFPs
+          </h2>
+          <ul
+                    className="ViewList"
+          >
+                    <li
+                              className="ViewList-item ViewList-item--active"
+                              onClick={[Function]}
+                    >
+                              List
+                    </li>
+                    <li
+                              className="ViewList-item "
+                              onClick={[Function]}
+                    >
+                              Map
+                    </li>
+          </ul>
+</div>,
+        <Unknown />,
+        false,
+        false,
+      ],
+      "className": "App",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1>
+              CFP Organizer
+</h1>,
+            <h2>
+              Sort and filter Papercall CFPs
+</h2>,
+            <ul
+              className="ViewList"
+>
+              <li
+                            className="ViewList-item ViewList-item--active"
+                            onClick={[Function]}
+              >
+                            List
+              </li>
+              <li
+                            className="ViewList-item "
+                            onClick={[Function]}
+              >
+                            Map
+              </li>
+</ul>,
+          ],
+          "className": "App-header",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "CFP Organizer",
+            },
+            "ref": null,
+            "rendered": "CFP Organizer",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Sort and filter Papercall CFPs",
+            },
+            "ref": null,
+            "rendered": "Sort and filter Papercall CFPs",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li
+                  className="ViewList-item ViewList-item--active"
+                  onClick={[Function]}
+>
+                  List
+</li>,
+                <li
+                  className="ViewList-item "
+                  onClick={[Function]}
+>
+                  Map
+</li>,
+              ],
+              "className": "ViewList",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "List",
+                  "className": "ViewList-item ViewList-item--active",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "List",
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Map",
+                  "className": "ViewList-item ",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Map",
+                "type": "li",
+              },
+            ],
+            "type": "ul",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      false,
+      false,
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="App-header"
+>
+            <h1>
+                        CFP Organizer
+            </h1>
+            <h2>
+                        Sort and filter Papercall CFPs
+            </h2>
+            <ul
+                        className="ViewList"
+            >
+                        <li
+                                    className="ViewList-item ViewList-item--active"
+                                    onClick={[Function]}
+                        >
+                                    List
+                        </li>
+                        <li
+                                    className="ViewList-item "
+                                    onClick={[Function]}
+                        >
+                                    Map
+                        </li>
+            </ul>
+</div>,
+          <Unknown />,
+          false,
+          false,
+        ],
+        "className": "App",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1>
+                CFP Organizer
+</h1>,
+              <h2>
+                Sort and filter Papercall CFPs
+</h2>,
+              <ul
+                className="ViewList"
+>
+                <li
+                                className="ViewList-item ViewList-item--active"
+                                onClick={[Function]}
+                >
+                                List
+                </li>
+                <li
+                                className="ViewList-item "
+                                onClick={[Function]}
+                >
+                                Map
+                </li>
+</ul>,
+            ],
+            "className": "App-header",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "CFP Organizer",
+              },
+              "ref": null,
+              "rendered": "CFP Organizer",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Sort and filter Papercall CFPs",
+              },
+              "ref": null,
+              "rendered": "Sort and filter Papercall CFPs",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li
+                    className="ViewList-item ViewList-item--active"
+                    onClick={[Function]}
+>
+                    List
+</li>,
+                  <li
+                    className="ViewList-item "
+                    onClick={[Function]}
+>
+                    Map
+</li>,
+                ],
+                "className": "ViewList",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "List",
+                    "className": "ViewList-item ViewList-item--active",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "List",
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Map",
+                    "className": "ViewList-item ",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Map",
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        false,
+        false,
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

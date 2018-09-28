@@ -1,0 +1,239 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render renders properly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    event={
+        Object {
+            "cfpClose": "September 30, 2018 23:00 UTC",
+            "cfpUrl": "http://url.com",
+            "city": "Chicago",
+            "contintent": "North America",
+            "country": "United States",
+            "countryCode": "US",
+            "date": "September 30, 2018",
+            "eventTags": "Javascript, Ruby, Tech",
+            "lat": 41,
+            "lng": -55,
+            "location": "Chicago, IL",
+            "name": "name",
+            "url": "http://url.com",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <a
+          href="http://url.com"
+          target="_blank"
+>
+          name
+</a>,
+        " - ",
+        "September 30, 2018",
+        " ",
+        <br />,
+        "Chicago",
+        ", ",
+        "United States",
+        " ",
+        <br />,
+        <a
+          href="http://url.com"
+          target="_blank"
+>
+          CFP Closes on 
+          September 30, 2018 23:00 UTC
+</a>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "name",
+          "href": "http://url.com",
+          "target": "_blank",
+        },
+        "ref": null,
+        "rendered": "name",
+        "type": "a",
+      },
+      " - ",
+      "September 30, 2018",
+      " ",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "br",
+      },
+      "Chicago",
+      ", ",
+      "United States",
+      " ",
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": "br",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "CFP Closes on ",
+            "September 30, 2018 23:00 UTC",
+          ],
+          "href": "http://url.com",
+          "target": "_blank",
+        },
+        "ref": null,
+        "rendered": Array [
+          "CFP Closes on ",
+          "September 30, 2018 23:00 UTC",
+        ],
+        "type": "a",
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <a
+            href="http://url.com"
+            target="_blank"
+>
+            name
+</a>,
+          " - ",
+          "September 30, 2018",
+          " ",
+          <br />,
+          "Chicago",
+          ", ",
+          "United States",
+          " ",
+          <br />,
+          <a
+            href="http://url.com"
+            target="_blank"
+>
+            CFP Closes on 
+            September 30, 2018 23:00 UTC
+</a>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "name",
+            "href": "http://url.com",
+            "target": "_blank",
+          },
+          "ref": null,
+          "rendered": "name",
+          "type": "a",
+        },
+        " - ",
+        "September 30, 2018",
+        " ",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
+        },
+        "Chicago",
+        ", ",
+        "United States",
+        " ",
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": "br",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "CFP Closes on ",
+              "September 30, 2018 23:00 UTC",
+            ],
+            "href": "http://url.com",
+            "target": "_blank",
+          },
+          "ref": null,
+          "rendered": Array [
+            "CFP Closes on ",
+            "September 30, 2018 23:00 UTC",
+          ],
+          "type": "a",
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

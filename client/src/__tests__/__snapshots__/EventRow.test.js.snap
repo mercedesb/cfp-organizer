@@ -1,0 +1,447 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render renders properly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Unknown
+    cellClassName="EventRow-cell"
+    className="EventRow"
+    event={
+        Object {
+            "cfpClose": "September 30, 2018 23:00 UTC",
+            "cfpUrl": "http://url.com",
+            "city": "Chicago",
+            "contintent": "North America",
+            "country": "United States",
+            "countryCode": "US",
+            "date": "September 30, 2018",
+            "eventTags": "Javascript, Ruby, Tech",
+            "lat": 41,
+            "lng": -55,
+            "location": "Chicago, IL",
+            "name": "name",
+            "url": "http://url.com",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="EventRow-cell"
+>
+          <a
+                    href="http://url.com"
+                    target="_blank"
+          >
+                    name
+          </a>
+</div>,
+        <div
+          className="EventRow-cell Table-cell--location"
+>
+          Chicago, IL
+          <span
+                    className="u-small"
+          >
+                    Chicago
+                    , 
+                    United States
+                    , 
+                    US
+                    , 
+          </span>
+</div>,
+        <div
+          className="EventRow-cell"
+>
+          September 30, 2018
+</div>,
+        <div
+          className="EventRow-cell"
+>
+          <a
+                    href="http://url.com"
+                    target="_blank"
+          >
+                    September 30, 2018 23:00 UTC
+          </a>
+</div>,
+        <div
+          className="EventRow-cell u-small"
+>
+          Javascript, Ruby, Tech
+</div>,
+      ],
+      "className": "EventRow EventRow",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <a
+            href="http://url.com"
+            target="_blank"
+>
+            name
+</a>,
+          "className": "EventRow-cell",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "name",
+            "href": "http://url.com",
+            "target": "_blank",
+          },
+          "ref": null,
+          "rendered": "name",
+          "type": "a",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Chicago, IL",
+            <span
+              className="u-small"
+>
+              Chicago
+              , 
+              United States
+              , 
+              US
+              , 
+</span>,
+          ],
+          "className": "EventRow-cell Table-cell--location",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Chicago, IL",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Chicago",
+                ", ",
+                "United States",
+                ", ",
+                "US",
+                ", ",
+                undefined,
+              ],
+              "className": "u-small",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Chicago",
+              ", ",
+              "United States",
+              ", ",
+              "US",
+              ", ",
+              undefined,
+            ],
+            "type": "span",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "September 30, 2018",
+          "className": "EventRow-cell",
+        },
+        "ref": null,
+        "rendered": "September 30, 2018",
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <a
+            href="http://url.com"
+            target="_blank"
+>
+            September 30, 2018 23:00 UTC
+</a>,
+          "className": "EventRow-cell",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "September 30, 2018 23:00 UTC",
+            "href": "http://url.com",
+            "target": "_blank",
+          },
+          "ref": null,
+          "rendered": "September 30, 2018 23:00 UTC",
+          "type": "a",
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Javascript, Ruby, Tech",
+          "className": "EventRow-cell u-small",
+        },
+        "ref": null,
+        "rendered": "Javascript, Ruby, Tech",
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="EventRow-cell"
+>
+            <a
+                        href="http://url.com"
+                        target="_blank"
+            >
+                        name
+            </a>
+</div>,
+          <div
+            className="EventRow-cell Table-cell--location"
+>
+            Chicago, IL
+            <span
+                        className="u-small"
+            >
+                        Chicago
+                        , 
+                        United States
+                        , 
+                        US
+                        , 
+            </span>
+</div>,
+          <div
+            className="EventRow-cell"
+>
+            September 30, 2018
+</div>,
+          <div
+            className="EventRow-cell"
+>
+            <a
+                        href="http://url.com"
+                        target="_blank"
+            >
+                        September 30, 2018 23:00 UTC
+            </a>
+</div>,
+          <div
+            className="EventRow-cell u-small"
+>
+            Javascript, Ruby, Tech
+</div>,
+        ],
+        "className": "EventRow EventRow",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <a
+              href="http://url.com"
+              target="_blank"
+>
+              name
+</a>,
+            "className": "EventRow-cell",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "name",
+              "href": "http://url.com",
+              "target": "_blank",
+            },
+            "ref": null,
+            "rendered": "name",
+            "type": "a",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Chicago, IL",
+              <span
+                className="u-small"
+>
+                Chicago
+                , 
+                United States
+                , 
+                US
+                , 
+</span>,
+            ],
+            "className": "EventRow-cell Table-cell--location",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Chicago, IL",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Chicago",
+                  ", ",
+                  "United States",
+                  ", ",
+                  "US",
+                  ", ",
+                  undefined,
+                ],
+                "className": "u-small",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Chicago",
+                ", ",
+                "United States",
+                ", ",
+                "US",
+                ", ",
+                undefined,
+              ],
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "September 30, 2018",
+            "className": "EventRow-cell",
+          },
+          "ref": null,
+          "rendered": "September 30, 2018",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <a
+              href="http://url.com"
+              target="_blank"
+>
+              September 30, 2018 23:00 UTC
+</a>,
+            "className": "EventRow-cell",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "September 30, 2018 23:00 UTC",
+              "href": "http://url.com",
+              "target": "_blank",
+            },
+            "ref": null,
+            "rendered": "September 30, 2018 23:00 UTC",
+            "type": "a",
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Javascript, Ruby, Tech",
+            "className": "EventRow-cell u-small",
+          },
+          "ref": null,
+          "rendered": "Javascript, Ruby, Tech",
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
