@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render renders properly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Table
+    data={
+        Array [
+            Object {
+              "cfpClose": "September 30, 2018 23:00 UTC",
+              "cfpUrl": "http://url.com",
+              "city": "Chicago",
+              "continent": "North America",
+              "country": "United States",
+              "countryCode": "US",
+              "date": "September 30, 2018",
+              "eventTags": "Javascript, Ruby, Tech",
+              "lat": 41,
+              "lng": -55,
+              "location": "Chicago, IL",
+              "momentDate": "2018-09-30T05:00:00.000Z",
+              "name": "name",
+              "url": "http://url.com",
+            },
+            Object {
+              "cfpClose": "October 30, 2018 23:00 UTC",
+              "cfpUrl": "http://url.com",
+              "city": "Philadelphia",
+              "continent": "North America",
+              "country": "United States",
+              "countryCode": "US",
+              "date": "October 30, 2018",
+              "eventTags": "Python, React",
+              "lat": 41,
+              "lng": -40,
+              "location": "Philadelphia, PA",
+              "momentDate": "2018-10-30T05:00:00.000Z",
+              "name": "a name",
+              "url": "http://url.com",
+            },
+          ]
+    }
+    headers={Array []}
+    rowComponent={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <header
+          className="Table-row Table-row--header"
+>
+          
+</header>,
+        <div
+          className="Table-body"
+>
+          
+</div>,
+      ],
+      "className": "Table undefined",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [],
+          "className": "Table-row Table-row--header",
+        },
+        "ref": null,
+        "rendered": Array [],
+        "type": "header",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            undefined,
+            undefined,
+          ],
+          "className": "Table-body",
+        },
+        "ref": null,
+        "rendered": Array [
+          undefined,
+          undefined,
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <header
+            className="Table-row Table-row--header"
+>
+            
+</header>,
+          <div
+            className="Table-body"
+>
+            
+</div>,
+        ],
+        "className": "Table undefined",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [],
+            "className": "Table-row Table-row--header",
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": "header",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              undefined,
+              undefined,
+            ],
+            "className": "Table-body",
+          },
+          "ref": null,
+          "rendered": Array [
+            undefined,
+            undefined,
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
