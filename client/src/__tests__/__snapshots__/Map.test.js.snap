@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render renders properly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Map
+    data={
+        Array [
+            Object {
+              "cfpClose": "September 30, 2018 23:00 UTC",
+              "cfpUrl": "http://url.com",
+              "city": "Chicago",
+              "contintent": "North America",
+              "country": "United States",
+              "countryCode": "US",
+              "date": "September 30, 2018",
+              "eventTags": "Javascript, Ruby, Tech",
+              "lat": 41,
+              "lng": -55,
+              "location": "Chicago, IL",
+              "name": "name",
+              "url": "http://url.com",
+            },
+          ]
+    }
+    popupComponent={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "center": Array [
+        35,
+        -20,
+      ],
+      "children": Array [
+        <Unknown
+          attribution="© <a href=\\"http://osm.org/copyright\\">OpenStreetMap</a> contributors"
+          url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+/>,
+        Array [
+          <Unknown
+            position={
+                        Array [
+                                    41,
+                                    -55,
+                                  ]
+            }
+>
+            <Unknown />
+</Unknown>,
+        ],
+      ],
+      "className": "Map",
+      "zoom": 3,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "attribution": "© <a href=\\"http://osm.org/copyright\\">OpenStreetMap</a> contributors",
+          "url": "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": "0",
+        "nodeType": "function",
+        "props": Object {
+          "children": <Unknown />,
+          "position": Array [
+            41,
+            -55,
+          ],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+            Symbol(Symbol.hasInstance): [Function],
+          },
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "render": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        },
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "center": Array [
+          35,
+          -20,
+        ],
+        "children": Array [
+          <Unknown
+            attribution="© <a href=\\"http://osm.org/copyright\\">OpenStreetMap</a> contributors"
+            url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+/>,
+          Array [
+            <Unknown
+              position={
+                            Array [
+                                          41,
+                                          -55,
+                                        ]
+              }
+>
+              <Unknown />
+</Unknown>,
+          ],
+        ],
+        "className": "Map",
+        "zoom": 3,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "attribution": "© <a href=\\"http://osm.org/copyright\\">OpenStreetMap</a> contributors",
+            "url": "http://{s}.tile.osm.org/{z}/{x}/{y}.png",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+            Symbol(Symbol.hasInstance): [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": "0",
+          "nodeType": "function",
+          "props": Object {
+            "children": <Unknown />,
+            "position": Array [
+              41,
+              -55,
+            ],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "render": [Function],
+              Symbol(Symbol.hasInstance): [Function],
+            },
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "render": [Function],
+            Symbol(Symbol.hasInstance): [Function],
+          },
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
