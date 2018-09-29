@@ -8,7 +8,7 @@ export const MobileEventRow = ({ className, cellClassName, event, isActive, onCl
       {!isActive && <div className="Arrow Arrow--down"></div>}
     </div>
     <div className={`${cellClassName} EventRow-cell EventRow-cell--body`}>
-      {event.city}, {event.country} <br />
+      {event.city}, {event.state}, {event.country} <br />
       <a href={event.cfpUrl} target="_blank">CFP Closes on {event.cfpClose}</a>
       <div className='u-small'>{event.eventTags}</div>
     </div>

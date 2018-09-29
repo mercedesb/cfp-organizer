@@ -13,6 +13,7 @@ var options = {
 var geocoder = NodeGeocoder(options);
 
 function geocode(data) {
+  let i = 0
   let promises = [];
   data.forEach((dataItem) => {
     let promise = geocoder.geocode(dataItem.location)
@@ -21,10 +22,11 @@ function geocode(data) {
         if (geocodeResponse && geocodeResponse.length > 0) {
           geoCodeData = geocodeResponse[0];
         } 
-
+        
         dataItem['lat'] = geoCodeData.latitude || '';
         dataItem['lng'] = geoCodeData.longitude || '';
         dataItem['city'] = geoCodeData.city || '';
+        dataItem['state'] = geoCodeData.state || '';
         dataItem['country'] = geoCodeData.country || '';
         dataItem['countryCode'] = geoCodeData.countryCode || '';
         dataItem['continent'] = continents[(countries[geoCodeData.countryCode] || {}).continent] || '';
