@@ -42,7 +42,14 @@ To run the client and server separately
 
 ## Credits
 - [Loading spinner](https://loading.io/css/)
-- [Map](https://github.com/PaulLeCam/react-leaflet)
+
+## Dependencies
+- [React](https://github.com/facebook/react)
+- [Express](https://github.com/expressjs/express)
+- [Cheerio](https://github.com/cheeriojs/cheerio)
+- [node-geocoder](https://github.com/nchaulet/node-geocoder)
+- [Leaflet](https://github.com/Leaflet/Leaflet)
+- [React-Leaflet](https://github.com/PaulLeCam/react-leaflet)
 
 ## React README
 The boilerplate create-react-app README can be found [here](client/README.md).
