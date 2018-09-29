@@ -143,6 +143,7 @@ class App extends Component {
             popupComponent={(dataItem) => <EventPopup event={dataItem} />}
           />
         }
+        <p className='Created u-small'>Created by Mercedes Bernard | <a href="https://github.com/mercedesb">Github</a> | <a href="https://twitter.com/mercedescodes">Twitter</a></p>
       </div>
     );
   }
