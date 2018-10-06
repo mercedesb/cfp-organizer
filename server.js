@@ -3,6 +3,7 @@ const path = require('path');
 var mcache = require('memory-cache');
 
 const getPapercallEvents = require('./server/papercallScraper');
+const getConfsTechEvents = require('./server/confstechScraper');
 const geocode = require('./server/geocode');
 
 const app = express();
@@ -35,9 +36,16 @@ app.get('/api/hello', (req, res) => {
 });
 
 app.get('/api/openCfps', cache(ONE_DAY), (req, res) => {
-  getPapercallEvents()
-  .then(events => geocode(events))
-  .then(events => res.send({ events: events }));
+  const promises = [];
+  promises.push(getPapercallEvents());
+  promises.push(getConfsTechEvents());
+
+  return Promise.all(promises)
+    .then((arrReturnedEvents) => {
+      const events = [].concat.apply([], arrReturnedEvents); // .flat() is still in Candidate and not avail in Node
+      return geocode(events)
+    })
+    .then(events => res.send({ events: events }));
 });
 
 // The "catchall" handler: for any request that doesn't
