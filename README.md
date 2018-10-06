@@ -6,6 +6,23 @@ This is a super simple React app with an Express backend for sorting and filteri
 
 Papercall's UI doesn't allow for sorting or filtering the event name, location, date, or CFP close date of the listed events. And there isn't an API to use for getting this data. This app is meant to make those activities easier.
 
+## Want to add a CFP?
+
+Make a PR! I have a manually curated list of CFPs [here](./data/cfps.json) for CFPs that I find via other sources, like Twitter, that are not curated elsewhere.
+
+`cfps/json` is a simple JSON array of events. The json format is as follows
+```
+ {
+    "name": "Event Name",
+    "location": "City, State, Country",
+    "date": "MMMM DD, YYYY",
+    "cfpClose": "MMMM DD, YYYY",
+    "url": "https://url.com/",
+    "cfpUrl": "https://url.com/",
+    "eventTags": "comma, separated, list, of, tags"
+  }
+```
+
 ## Installation
 ```
 git clone https://github.com/mercedesb/cfp-organizer.git
@@ -44,6 +61,7 @@ To run the client and server separately
 - [Papercall](https://www.papercall.io/)
 - [Confs.tech](https://confs.tech)
 - [SoftwareMill's it-cfp-list](https://github.com/softwaremill/it-cfp-list)
+- [Manually curated via cfps.json](./data/cfps.json)
 
 ## Credits
 - [Loading spinner](https://loading.io/css/)
