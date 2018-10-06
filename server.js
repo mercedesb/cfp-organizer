@@ -4,6 +4,7 @@ var mcache = require('memory-cache');
 
 const getPapercallEvents = require('./server/papercallScraper');
 const getConfsTechEvents = require('./server/confstechScraper');
+const getSoftwareMillEvents = require('./server/softwareMillCfpScraper');
 const geocode = require('./server/geocode');
 
 const app = express();
@@ -11,13 +12,13 @@ const app = express();
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-const ONE_DAY = 60 * 60 * 24;
+const CACHE_DURATION = 60 * 60 * 24;
 
 const cache = (duration) => {
   return (req, res, next) => {
     let key = '__express__' + req.originalUrl || req.url
     let cachedBody = mcache.get(key)
-    if (cachedBody) {
+    if (cachedBody && process.env.NODE_ENV !== 'development') {
       res.send(cachedBody)
       return
     } else {
@@ -35,10 +36,11 @@ app.get('/api/hello', (req, res) => {
   res.send({ express: 'Hello From Express' });
 });
 
-app.get('/api/openCfps', cache(ONE_DAY), (req, res) => {
+app.get('/api/openCfps', cache(CACHE_DURATION), (req, res) => {
   const promises = [];
   promises.push(getPapercallEvents());
   promises.push(getConfsTechEvents());
+  promises.push(getSoftwareMillEvents());
 
   return Promise.all(promises)
     .then((arrReturnedEvents) => {
