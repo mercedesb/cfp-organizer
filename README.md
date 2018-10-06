@@ -40,6 +40,11 @@ To run the client and server separately
 
 `yarn server` and `yarn client`
 
+## CFP Sources
+- [Papercall](https://www.papercall.io/)
+- [Confs.tech](https://confs.tech)
+- [SoftwareMill's it-cfp-list](https://github.com/softwaremill/it-cfp-list)
+
 ## Credits
 - [Loading spinner](https://loading.io/css/)
 
