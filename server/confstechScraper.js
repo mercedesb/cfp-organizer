@@ -68,7 +68,7 @@ function addYear(text) {
 function parseDate(text) {
   // isoDate -> longDate
   if (!text) return '';
-  return dateformat(text, 'longDate');
+  return dateformat(text, 'longDate', true);
 }
 
 function getConfsTechEvents() {

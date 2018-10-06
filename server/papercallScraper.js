@@ -1,5 +1,6 @@
 const requestPromise = require('request-promise');
 const cheerio = require('cheerio');
+const dateformat = require('dateformat');
 
 const PAPERCALL_URL = 'https://www.papercall.io/events?open-cfps=true&page=';
 const PAPERCALL_DATE_HEADER = 'Event Dates: '
@@ -58,7 +59,7 @@ function getEvent($, el) {
     location: parseLocation(eventHeading),
     date: parseDate(date),
     // September 29, 2018 09:09 UTC
-    cfpClose: cfpClose || '',
+    cfpClose: parseDate(cfpClose),
     url: eventUrl || '',
     cfpUrl: cfpUrl || '',
     eventTags: eventTags
@@ -76,7 +77,7 @@ function parseLocation(text) {
 }
 
 function parseDate(text) {
-  if (!text) return;
+  if (!text) return '';
 
   text = text.replace(PAPERCALL_DATE_HEADER, "").trim();
 
@@ -84,8 +85,10 @@ function parseDate(text) {
   const regexMatch = text.match(dateRegex);
   if (regexMatch && regexMatch.length > 0) {
     text = text.match(dateRegex)[0];
-    return text;
+    return dateformat(text, 'longDate', true);
   }
+
+  return '';
 }
 
 const getPapercallEvents = function () {
