@@ -47,6 +47,22 @@ ShallowWrapper {
         <Unknown />,
         false,
         false,
+        <p
+          className="Created u-small"
+>
+          Created by Mercedes Bernard | 
+          <a
+                    href="https://github.com/mercedesb"
+          >
+                    Github
+          </a>
+           | 
+          <a
+                    href="https://twitter.com/mercedescodes"
+          >
+                    Twitter
+          </a>
+</p>,
       ],
       "className": "App",
     },
@@ -173,6 +189,58 @@ ShallowWrapper {
       },
       false,
       false,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Created by Mercedes Bernard | ",
+            <a
+              href="https://github.com/mercedesb"
+>
+              Github
+</a>,
+            " | ",
+            <a
+              href="https://twitter.com/mercedescodes"
+>
+              Twitter
+</a>,
+          ],
+          "className": "Created u-small",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Created by Mercedes Bernard | ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Github",
+              "href": "https://github.com/mercedesb",
+            },
+            "ref": null,
+            "rendered": "Github",
+            "type": "a",
+          },
+          " | ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Twitter",
+              "href": "https://twitter.com/mercedescodes",
+            },
+            "ref": null,
+            "rendered": "Twitter",
+            "type": "a",
+          },
+        ],
+        "type": "p",
+      },
     ],
     "type": "div",
   },
@@ -212,6 +280,22 @@ ShallowWrapper {
           <Unknown />,
           false,
           false,
+          <p
+            className="Created u-small"
+>
+            Created by Mercedes Bernard | 
+            <a
+                        href="https://github.com/mercedesb"
+            >
+                        Github
+            </a>
+             | 
+            <a
+                        href="https://twitter.com/mercedescodes"
+            >
+                        Twitter
+            </a>
+</p>,
         ],
         "className": "App",
       },
@@ -338,6 +422,58 @@ ShallowWrapper {
         },
         false,
         false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Created by Mercedes Bernard | ",
+              <a
+                href="https://github.com/mercedesb"
+>
+                Github
+</a>,
+              " | ",
+              <a
+                href="https://twitter.com/mercedescodes"
+>
+                Twitter
+</a>,
+            ],
+            "className": "Created u-small",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Created by Mercedes Bernard | ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Github",
+                "href": "https://github.com/mercedesb",
+              },
+              "ref": null,
+              "rendered": "Github",
+              "type": "a",
+            },
+            " | ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Twitter",
+                "href": "https://twitter.com/mercedescodes",
+              },
+              "ref": null,
+              "rendered": "Twitter",
+              "type": "a",
+            },
+          ],
+          "type": "p",
+        },
       ],
       "type": "div",
     },

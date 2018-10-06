@@ -57,9 +57,8 @@ ShallowWrapper {
           >
                     Chicago
                     , 
-                    United States
                     , 
-                    US
+                    United States
                     , 
           </span>
 </div>,
@@ -129,9 +128,8 @@ ShallowWrapper {
 >
               Chicago
               , 
-              United States
               , 
-              US
+              United States
               , 
 </span>,
           ],
@@ -148,9 +146,9 @@ ShallowWrapper {
               "children": Array [
                 "Chicago",
                 ", ",
-                "United States",
+                undefined,
                 ", ",
-                "US",
+                "United States",
                 ", ",
                 undefined,
               ],
@@ -160,9 +158,9 @@ ShallowWrapper {
             "rendered": Array [
               "Chicago",
               ", ",
-              "United States",
+              undefined,
               ", ",
-              "US",
+              "United States",
               ", ",
               undefined,
             ],
@@ -253,9 +251,8 @@ ShallowWrapper {
             >
                         Chicago
                         , 
-                        United States
                         , 
-                        US
+                        United States
                         , 
             </span>
 </div>,
@@ -325,9 +322,8 @@ ShallowWrapper {
 >
                 Chicago
                 , 
-                United States
                 , 
-                US
+                United States
                 , 
 </span>,
             ],
@@ -344,9 +340,9 @@ ShallowWrapper {
                 "children": Array [
                   "Chicago",
                   ", ",
-                  "United States",
+                  undefined,
                   ", ",
-                  "US",
+                  "United States",
                   ", ",
                   undefined,
                 ],
@@ -356,9 +352,9 @@ ShallowWrapper {
               "rendered": Array [
                 "Chicago",
                 ", ",
-                "United States",
+                undefined,
                 ", ",
-                "US",
+                "United States",
                 ", ",
                 undefined,
               ],
