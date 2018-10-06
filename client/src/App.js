@@ -103,7 +103,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <h1>CFP Organizer</h1>
-          <h2>Sort and filter Papercall CFPs</h2>
+          <h2>Sort and filter open CFPs</h2>
           <ul className='ViewList'>
             <li className={`ViewList-item ${this.state.activeView === 'list' ? 'ViewList-item--active' : ''}`} onClick={() => this.setActiveView('list')}>List</li>
             <li className={`ViewList-item ${this.state.activeView === 'map' ? 'ViewList-item--active' : ''}`} onClick={() => this.setActiveView('map')}>Map</li>
