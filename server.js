@@ -5,6 +5,7 @@ var mcache = require('memory-cache');
 const getPapercallEvents = require('./server/papercallScraper');
 const getConfsTechEvents = require('./server/confstechScraper');
 const getSoftwareMillEvents = require('./server/softwareMillCfpScraper');
+const getCfpsFromData = require('./server/dataFetcher');
 const filterOutPastEvents = require('./server/filterEvents');
 const geocode = require('./server/geocode');
 
@@ -42,6 +43,7 @@ app.get('/api/openCfps', cache(CACHE_DURATION), (req, res) => {
   promises.push(getPapercallEvents());
   promises.push(getConfsTechEvents());
   promises.push(getSoftwareMillEvents());
+  promises.push(getCfpsFromData());
 
   return Promise.all(promises)
     .then((arrReturnedEvents) => {
