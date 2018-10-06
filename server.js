@@ -5,6 +5,7 @@ var mcache = require('memory-cache');
 const getPapercallEvents = require('./server/papercallScraper');
 const getConfsTechEvents = require('./server/confstechScraper');
 const getSoftwareMillEvents = require('./server/softwareMillCfpScraper');
+const filterOutPastEvents = require('./server/filterEvents');
 const geocode = require('./server/geocode');
 
 const app = express();
@@ -44,9 +45,10 @@ app.get('/api/openCfps', cache(CACHE_DURATION), (req, res) => {
 
   return Promise.all(promises)
     .then((arrReturnedEvents) => {
-      const events = [].concat.apply([], arrReturnedEvents); // .flat() is still in Candidate and not avail in Node
-      return geocode(events)
+      return [].concat.apply([], arrReturnedEvents); // .flat() is still in Candidate and not avail in Node
     })
+    .then(events => filterOutPastEvents(events))
+    .then(events => geocode(events))
     .then(events => res.send({ events: events }));
 });
 
