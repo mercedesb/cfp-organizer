@@ -13,7 +13,7 @@ function loadSubject(props = {}) {
     name: 'name',
     url: 'http://url.com',
     date: 'September 30, 2018',
-    cfpClose: 'September 30, 2018 23:00 UTC',
+    cfpClose: 'September 30, 2018',
     cfpUrl: 'http://url.com',
     location: 'Chicago, IL',
     eventTags: 'Javascript, Ruby, Tech',

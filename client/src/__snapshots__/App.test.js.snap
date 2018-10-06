@@ -25,7 +25,7 @@ ShallowWrapper {
                     CFP Organizer
           </h1>
           <h2>
-                    Sort and filter Papercall CFPs
+                    Sort and filter open CFPs
           </h2>
           <ul
                     className="ViewList"
@@ -78,7 +78,7 @@ ShallowWrapper {
               CFP Organizer
 </h1>,
             <h2>
-              Sort and filter Papercall CFPs
+              Sort and filter open CFPs
 </h2>,
             <ul
               className="ViewList"
@@ -117,10 +117,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Sort and filter Papercall CFPs",
+              "children": "Sort and filter open CFPs",
             },
             "ref": null,
-            "rendered": "Sort and filter Papercall CFPs",
+            "rendered": "Sort and filter open CFPs",
             "type": "h2",
           },
           Object {
@@ -258,7 +258,7 @@ ShallowWrapper {
                         CFP Organizer
             </h1>
             <h2>
-                        Sort and filter Papercall CFPs
+                        Sort and filter open CFPs
             </h2>
             <ul
                         className="ViewList"
@@ -311,7 +311,7 @@ ShallowWrapper {
                 CFP Organizer
 </h1>,
               <h2>
-                Sort and filter Papercall CFPs
+                Sort and filter open CFPs
 </h2>,
               <ul
                 className="ViewList"
@@ -350,10 +350,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Sort and filter Papercall CFPs",
+                "children": "Sort and filter open CFPs",
               },
               "ref": null,
-              "rendered": "Sort and filter Papercall CFPs",
+              "rendered": "Sort and filter open CFPs",
               "type": "h2",
             },
             Object {

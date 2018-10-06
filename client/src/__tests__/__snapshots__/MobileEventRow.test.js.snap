@@ -8,7 +8,7 @@ ShallowWrapper {
     className="EventRow"
     event={
         Object {
-            "cfpClose": "September 30, 2018 23:00 UTC",
+            "cfpClose": "September 30, 2018",
             "cfpUrl": "http://url.com",
             "city": "Chicago",
             "contintent": "North America",
@@ -76,7 +76,7 @@ ShallowWrapper {
                     href="http://url.com"
                     target="_blank"
           >
-                    September 30, 2018 23:00 UTC
+                    September 30, 2018
           </a>
 </div>,
         <div
@@ -192,7 +192,7 @@ ShallowWrapper {
             href="http://url.com"
             target="_blank"
 >
-            September 30, 2018 23:00 UTC
+            September 30, 2018
 </a>,
           "className": "EventRow-cell",
         },
@@ -202,12 +202,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "September 30, 2018 23:00 UTC",
+            "children": "September 30, 2018",
             "href": "http://url.com",
             "target": "_blank",
           },
           "ref": null,
-          "rendered": "September 30, 2018 23:00 UTC",
+          "rendered": "September 30, 2018",
           "type": "a",
         },
         "type": "div",
@@ -270,7 +270,7 @@ ShallowWrapper {
                         href="http://url.com"
                         target="_blank"
             >
-                        September 30, 2018 23:00 UTC
+                        September 30, 2018
             </a>
 </div>,
           <div
@@ -386,7 +386,7 @@ ShallowWrapper {
               href="http://url.com"
               target="_blank"
 >
-              September 30, 2018 23:00 UTC
+              September 30, 2018
 </a>,
             "className": "EventRow-cell",
           },
@@ -396,12 +396,12 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "September 30, 2018 23:00 UTC",
+              "children": "September 30, 2018",
               "href": "http://url.com",
               "target": "_blank",
             },
             "ref": null,
-            "rendered": "September 30, 2018 23:00 UTC",
+            "rendered": "September 30, 2018",
             "type": "a",
           },
           "type": "div",
@@ -452,7 +452,7 @@ ShallowWrapper {
     className="EventRow"
     event={
         Object {
-            "cfpClose": "September 30, 2018 23:00 UTC",
+            "cfpClose": "September 30, 2018",
             "cfpUrl": "http://url.com",
             "city": "Chicago",
             "contintent": "North America",
@@ -520,7 +520,7 @@ ShallowWrapper {
                     href="http://url.com"
                     target="_blank"
           >
-                    September 30, 2018 23:00 UTC
+                    September 30, 2018
           </a>
 </div>,
         <div
@@ -636,7 +636,7 @@ ShallowWrapper {
             href="http://url.com"
             target="_blank"
 >
-            September 30, 2018 23:00 UTC
+            September 30, 2018
 </a>,
           "className": "EventRow-cell",
         },
@@ -646,12 +646,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "September 30, 2018 23:00 UTC",
+            "children": "September 30, 2018",
             "href": "http://url.com",
             "target": "_blank",
           },
           "ref": null,
-          "rendered": "September 30, 2018 23:00 UTC",
+          "rendered": "September 30, 2018",
           "type": "a",
         },
         "type": "div",
@@ -714,7 +714,7 @@ ShallowWrapper {
                         href="http://url.com"
                         target="_blank"
             >
-                        September 30, 2018 23:00 UTC
+                        September 30, 2018
             </a>
 </div>,
           <div
@@ -830,7 +830,7 @@ ShallowWrapper {
               href="http://url.com"
               target="_blank"
 >
-              September 30, 2018 23:00 UTC
+              September 30, 2018
 </a>,
             "className": "EventRow-cell",
           },
@@ -840,12 +840,12 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "September 30, 2018 23:00 UTC",
+              "children": "September 30, 2018",
               "href": "http://url.com",
               "target": "_blank",
             },
             "ref": null,
-            "rendered": "September 30, 2018 23:00 UTC",
+            "rendered": "September 30, 2018",
             "type": "a",
           },
           "type": "div",

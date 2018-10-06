@@ -6,7 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Unknown
     event={
         Object {
-            "cfpClose": "September 30, 2018 23:00 UTC",
+            "cfpClose": "September 30, 2018",
             "cfpUrl": "http://url.com",
             "city": "Chicago",
             "contintent": "North America",
@@ -58,7 +58,7 @@ ShallowWrapper {
           target="_blank"
 >
           CFP Closes on 
-          September 30, 2018 23:00 UTC
+          September 30, 2018
 </a>,
       ],
     },
@@ -111,7 +111,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             "CFP Closes on ",
-            "September 30, 2018 23:00 UTC",
+            "September 30, 2018",
           ],
           "href": "http://url.com",
           "target": "_blank",
@@ -119,7 +119,7 @@ ShallowWrapper {
         "ref": null,
         "rendered": Array [
           "CFP Closes on ",
-          "September 30, 2018 23:00 UTC",
+          "September 30, 2018",
         ],
         "type": "a",
       },
@@ -155,7 +155,7 @@ ShallowWrapper {
             target="_blank"
 >
             CFP Closes on 
-            September 30, 2018 23:00 UTC
+            September 30, 2018
 </a>,
         ],
       },
@@ -208,7 +208,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               "CFP Closes on ",
-              "September 30, 2018 23:00 UTC",
+              "September 30, 2018",
             ],
             "href": "http://url.com",
             "target": "_blank",
@@ -216,7 +216,7 @@ ShallowWrapper {
           "ref": null,
           "rendered": Array [
             "CFP Closes on ",
-            "September 30, 2018 23:00 UTC",
+            "September 30, 2018",
           ],
           "type": "a",
         },

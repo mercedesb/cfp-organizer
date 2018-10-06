@@ -7,7 +7,7 @@ ShallowWrapper {
     data={
         Array [
             Object {
-              "cfpClose": "September 30, 2018 23:00 UTC",
+              "cfpClose": "September 30, 2018",
               "cfpUrl": "http://url.com",
               "city": "Chicago",
               "contintent": "North America",
