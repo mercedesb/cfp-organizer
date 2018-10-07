@@ -3,63 +3,81 @@
     "name": "PHP Yorkshire 2019",
     "location": "Heslington, York, UK",
     "date": "April 11, 2019",
-    "cfpClose": "November 16, 2018",
     "url": "https://www.phpyorkshire.co.uk/",
     "cfpUrl": "https://cfp.phpyorkshire.co.uk/",
+    "cfpClose": "November 16, 2018",
     "eventTags": ""
   },
   {
     "name": "Blue Team Summit & Training 2019",
     "location": "Louisville, Kentucky",
     "date": "April 11, 2019",
-    "cfpClose": "October 15, 2018",
     "url": "https://www.sans.org/event/blue-team-summit-2019",
     "cfpUrl": "https://survey.sans.org/jfe/form/SV_6hWtnnKwOJET7Jb",
+    "cfpClose": "October 15, 2018",
     "eventTags": "PowerShell, Security architecture,Continuous monitoring, Log management and analysis, Threat hunting"
   },
   {
     "name": "Midwest PHP Conference",
     "location": "Bloomington, Minnesota",
     "date": "March 8, 2019",
-    "cfpClose": "November 15, 2018",
     "url": "https://2019.midwestphp.org/",
     "cfpUrl": "https://cfp.midwestphp.org/",
+    "cfpClose": "November 15, 2018",
     "eventTags": ""
   },
   {
     "name": "HITB SecConf",
     "location": "Dubai, United Arab Emirates",
     "date": "November 25, 2018",
-    "cfpClose": "October 26, 2018",
     "url": "https://conference.hitb.org/hitbsecconf2018dxb/",
     "cfpUrl": "https://conference.hitb.org/hitbsecconf2018dxb/commsec-track/",
+    "cfpClose": "October 26, 2018",
     "eventTags": ""
   },
   {
     "name": "Devnexus 2019",
     "location": "Atlanta, Georgia",
     "date": "March 6, 2019",
-    "cfpClose": "October 15, 2018",
     "url": "https://devnexus.com/",
     "cfpUrl": "https://cfp.connectevents.io/en/dn2019/cfp/session/new",
+    "cfpClose": "October 15, 2018",
     "eventTags": ""
   },
   {
     "name": "#causeascene Conference London",
     "location": "London, England",
     "date": "October 23, 2018",
-    "cfpClose": "October 22, 2018",
     "url": "https://ti.to/kim.crayton.llc/causeascene-conference-London/en",
     "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdoUQhxQiFHFm8Q41JLxfohbMGuSrTyAxnl41zzRfBVR4B37w/viewform",
+    "cfpClose": "October 22, 2018",
     "eventTags": ""
   },
   {
     "name": "Stanford Blockchain Conference 2019",
     "location": "Standford, California",
     "date": "January 30, 2019",
-    "cfpClose": "October 16, 2018",
     "url": "https://ti.to/kim.crayton.llc/causeascene-conference-London/en",
-    "cfpUrl": " https://stanfordbc19.hotcrp.com/",
+    "cfpUrl": "https://stanfordbc19.hotcrp.com/",
+    "cfpClose": "October 16, 2018",
+    "eventTags": ""
+  },
+  {
+    "name": "VueConf US",
+    "location": "Tampa, Florida",
+    "date": "March 26, 2019",
+    "url": "http://us.vuejs.org/",
+    "cfpUrl": "http://us.vuejs.org/call-for-papers/",
+    "cfpClose": "November 1, 2018",
+    "eventTags": "Vue.js, web, HTML, CSS, mobile, design, UX"
+  },
+  {
+    "name": "John Slatin AccessU",
+    "location": "Austin, Texas",
+    "date": "May 15, 2019",
+    "url": "https://knowbility.org/programs/accessu/",
+    "cfpUrl": "January 24, 2019",
+    "cfpClose": "https://docs.google.com/forms/d/e/1FAIpQLSdiDJCDrpYMCG2WcQwjyiUtb1P-sWrqVryggHwNYQk-c9QMCQ/viewform",
     "eventTags": ""
   }
 ]
