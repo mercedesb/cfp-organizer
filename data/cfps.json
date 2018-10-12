@@ -76,8 +76,26 @@
     "location": "Austin, Texas",
     "date": "May 15, 2019",
     "url": "https://knowbility.org/programs/accessu/",
-    "cfpUrl": "January 24, 2019",
-    "cfpClose": "https://docs.google.com/forms/d/e/1FAIpQLSdiDJCDrpYMCG2WcQwjyiUtb1P-sWrqVryggHwNYQk-c9QMCQ/viewform",
+    "cfpClose": "January 24, 2019",
+    "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdiDJCDrpYMCG2WcQwjyiUtb1P-sWrqVryggHwNYQk-c9QMCQ/viewform",
+    "eventTags": ""
+  },
+  {
+    "name": "EmberConf",
+    "location": "Portland, Oregon",
+    "date": "March 18, 2019",
+    "url": "https://emberconf.com/",
+    "cfpClose": "November 18, 2018",
+    "cfpUrl": "https://emberconf.com/become-a-speaker.html",
+    "eventTags": ""
+  },
+  {
+    "name": "PyCon",
+    "location": "Cleveland, Ohio",
+    "date": "May 1, 2019",
+    "url": "https://us.pycon.org/2019/",
+    "cfpClose": "November 26, 2018",
+    "cfpUrl": "https://us.pycon.org/2019/speaking/",
     "eventTags": ""
   }
 ]
