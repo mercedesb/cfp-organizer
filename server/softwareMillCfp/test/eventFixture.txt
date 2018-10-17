@@ -1,0 +1,24 @@
+<article class="markdown-body entry-content">
+<table>
+  <thead>
+    <tr>
+      <th>CFP end</th>
+      <th>Conference Date</th>
+      <th>City, Country</th>
+      <th>Name</th>
+      <th>CFP Link</th>
+      <th>Keywords</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2019.02.02</td>
+      <td>2019.06.27-29</td>
+      <td>Tokyo, Japan</td>
+      <td><a href="https://2019.scalamatsuri.org" rel="nofollow">Scala Matsuri</a></td>
+      <td><a href="https://2019.scalamatsuri.org/en/cfp/" rel="nofollow">here</a></td>
+      <td>Scala, ...</td>
+    </tr>
+  </tbody>
+</table>
+</article>

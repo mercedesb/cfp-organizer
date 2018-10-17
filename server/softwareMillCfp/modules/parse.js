@@ -1,15 +1,30 @@
-const requestPromise = require('request-promise');
 const cheerio = require('cheerio');
 const dateformat = require('dateformat');
 
-const URL = 'https://github.com/softwaremill/it-cfp-list';
 const EVENT_TABLE_CONTAINER_SELECTOR = '.markdown-body.entry-content table';
 const EVENT_CONTAINER_SELECTOR = 'tbody tr';
 
-function getEvent($, el) {
+function parseEvents(html) {
+  try {
+    const $ = cheerio.load(html);
+  
+    const events = []
+    const eventTable = $(EVENT_TABLE_CONTAINER_SELECTOR)[0]
+    $(eventTable).find(EVENT_CONTAINER_SELECTOR).each(function (i, el) {
+      events[i] = parseEvent($, el);
+    });
+    return events;
+  }
+  catch (err) {
+    console.log(err);
+    return [];
+  }
+}
+
+function parseEvent($, el) {
   const eventDataItems = $(el).find('td')
   let name, location, date, url, cfpClose, cfpUrl, eventTags;
-  
+
   name = $(eventDataItems[3]).text();
   date = $(eventDataItems[1]).text();
   location = $(eventDataItems[2]).text();
@@ -33,7 +48,7 @@ function getEvent($, el) {
 function parseDate(text) {
   // isoDate -> longDate
   if (!text) return '';
-  
+
   const matches = text.match(/\d{4}\.\d{2}.\d{2}/)
   if (!!matches && matches.length > 0)
     return dateformat(matches[0], 'longDate');
@@ -41,22 +56,4 @@ function parseDate(text) {
     return ''
 }
 
-function getSoftwareMillEvents() {
-  return requestPromise(URL)
-  .then(function (html) {
-    const $ = cheerio.load(html);
-
-    const events = []
-    const eventTable = $(EVENT_TABLE_CONTAINER_SELECTOR)[0]
-    $(eventTable).find(EVENT_CONTAINER_SELECTOR).each(function (i, el) {
-      events[i] = getEvent($, el);
-    });
-    return events;
-  })
-  .catch(function (err) {
-    console.log(err)
-    return [];
-  });
-}
-
-module.exports = getSoftwareMillEvents;
+module.exports = parseEvents;
