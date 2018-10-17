@@ -1,4 +1,4 @@
-# CFP Organizer
+# CFP Organizer [![Build Status](https://travis-ci.com/mercedesb/cfp-organizer.svg?branch=master)](https://travis-ci.com/mercedesb/cfp-organizer)
 
 This is a super simple React app with an Express backend for sorting and filtering Papercall CFPs.
 
