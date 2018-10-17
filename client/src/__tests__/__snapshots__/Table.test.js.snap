@@ -18,7 +18,7 @@ ShallowWrapper {
               "lat": 41,
               "lng": -55,
               "location": "Chicago, IL",
-              "momentDate": "2018-09-30T05:00:00.000Z",
+              "momentDate": "2018-09-30T00:00:00.000Z",
               "name": "name",
               "url": "http://url.com",
             },

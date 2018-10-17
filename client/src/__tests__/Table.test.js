@@ -13,7 +13,7 @@ function loadSubject(props = {}) {
     name: 'name',
     url: 'http://url.com',
     date: 'September 30, 2018',
-    momentDate: moment('September 30, 2018', 'MMMM DD, YYYY'),
+    momentDate: moment.utc('2018-09-30 00:00:00'),
     cfpClose: 'September 30, 2018',
     cfpUrl: 'http://url.com',
     location: 'Chicago, IL',
