@@ -22,6 +22,19 @@ describe('parseEvents', () => {
   it('returns objects with the correct shape', () => {
     const actual = parseEvents(eventFixture)[0]
     expect(actual).toMatchObject({
+      name: expect.any(String),
+      location: expect.any(String),
+      date: expect.any(String),
+      url: expect.any(String),
+      cfpClose: expect.any(String),
+      cfpUrl: expect.any(String),
+      eventTags: expect.any(String)
+    })
+  })
+
+  it('returns objects with the correct data', () => {
+    const actual = parseEvents(eventFixture)[0]
+    expect(actual).toMatchObject({
       name: 'Scala Matsuri',
       location: 'Tokyo, Japan',
       date: 'June 27, 2019',
