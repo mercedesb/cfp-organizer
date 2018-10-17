@@ -20,8 +20,7 @@ describe('parseEvents', () => {
   });
 
   it('returns objects with the correct shape', () => {
-    const events = parseEvents(eventFixture)
-    const actual = events[0]
+    const actual = parseEvents(eventFixture)[0]
     expect(actual).toMatchObject({
       name: 'GDG DevFest',
       location: 'Vienna, Austria',
@@ -31,5 +30,11 @@ describe('parseEvents', () => {
       cfpUrl: 'https://devfest.at/call',
       eventTags: 'android'
     })
+  })
+
+  it('returns dates in the correct format', () => {
+    const actual = parseEvents(eventFixture)[0]
+    expect(actual.date).toEqual(expect.stringMatching(/\w \d{1,2}, \d{4}/))
+    expect(actual.cfpClose).toEqual(expect.stringMatching(/\w \d{1,2}, \d{4}/))
   })
 })
