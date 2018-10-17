@@ -6,7 +6,7 @@
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "start": "node server.js",
-    "test": "yarn test-client",
+    "test": "jest",
     "test-client": "cd client && yarn test",
     "heroku-postbuild": "cd client && yarn && yarn run build"
   },

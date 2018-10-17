@@ -1,16 +1,23 @@
-const puppeteer = require('puppeteer');
 const cheerio = require('cheerio');
 const dateformat = require('dateformat');
 
-const URL = 'https://confs.tech/cfp/';
 const EVENT_CONTAINER_SELECTOR = '._77wxq2CqJlAxR_motx3ug';
 // "{"@context":"http://schema.org","@type":"Event","location":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Warsaw","addressCountry":"Poland"},"name":"Warsaw, Poland"},"name":"ConFrontJS 2018","startDate":"2018-10-29","url":"https://confrontjs.com","endDate":"2018-10-29"}"
-const EVENT_DATA_SELECTOR = 'script';
 const EVENT_CFP_TAGS_CONTAINER_SELELCTOR = '.fFsN5Wluik3Xc_qQgVTP3.MY0Lq_wX1NNKPVse04Yop';
 const EVENT_CFP_SELECTOR = '._3tKep-gOBih3iBP93J8fm_';
 const EVENT_CFP_HEADER = "CFP closes ";
 
-function getEvent($, el) {
+function parseEvents(html) {
+  const $ = cheerio.load(html);
+
+  const events = []
+  $(EVENT_CONTAINER_SELECTOR).each(function (i, el) {
+    events[i] = parseEvent($, el);
+  });
+  return events;
+}
+
+function parseEvent($, el) {
   const eventJsonData = el.firstChild.firstChild.data; // find('script') doesn't work
 
   let eventData;
@@ -18,7 +25,7 @@ function getEvent($, el) {
     eventData = JSON.parse(eventJsonData)
   }
 
-  let name, location, date, url, cfpClose, cfpUrl, eventTags; 
+  let name, location, date, url, cfpClose, cfpUrl, eventTags;
 
   if (!!eventData) {
     name = eventData.name;
@@ -28,10 +35,10 @@ function getEvent($, el) {
   }
 
   const cfpTagsContainer = $(el).find(EVENT_CFP_TAGS_CONTAINER_SELELCTOR);
-  
+
   const cfpContainer = $(cfpTagsContainer).find(EVENT_CFP_SELECTOR)[0];
   cfpUrl = cfpContainer.attribs.href;
-  cfpClose = cfpContainer.firstChild.data; 
+  cfpClose = cfpContainer.firstChild.data;
   cfpClose = cfpClose.replace(EVENT_CFP_HEADER, "").trim(); // needs to  calculate year
 
   // #javascript –
@@ -71,30 +78,4 @@ function parseDate(text) {
   return dateformat(text, 'longDate', true);
 }
 
-function getConfsTechEvents() {
-  return puppeteer
-    .launch()
-    .then(function (browser) {
-      return browser.newPage();
-    })
-    .then(function (page) {
-      return page.goto(URL).then(function () {
-        return page.content();
-      });
-    })
-    .then(function (html) {
-      const $ = cheerio.load(html);
-
-      const events = []
-      $(EVENT_CONTAINER_SELECTOR).each(function (i, el) {
-        events[i] = getEvent($, el);
-      });
-      return events;
-    })
-    .catch(function (err) {
-      console.log(err)
-      return [];
-    });
-}
-
-module.exports = getConfsTechEvents;
+module.exports = parseEvents;

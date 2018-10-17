@@ -3,7 +3,7 @@ const path = require('path');
 var mcache = require('memory-cache');
 
 const getPapercallEvents = require('./server/papercall');
-const getConfsTechEvents = require('./server/confstechScraper');
+const getConfsTechEvents = require('./server/confstech');
 const getSoftwareMillEvents = require('./server/softwareMillCfpScraper');
 const getCfpsFromData = require('./server/dataFetcher');
 const filterOutPastEvents = require('./server/filterEvents');
