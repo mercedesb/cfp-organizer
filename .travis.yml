@@ -1,3 +1,7 @@
 language: node_js
 node_js:
-- stable
+  - stable
+env:
+  - TEST_DIR=./
+  - TEST_DIR=client
+script: cd $TEST_DIR && yarn && yarn test
