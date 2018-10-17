@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 var mcache = require('memory-cache');
 
-const getPapercallEvents = require('./server/papercallScraper');
+const getPapercallEvents = require('./server/papercall');
 const getConfsTechEvents = require('./server/confstechScraper');
 const getSoftwareMillEvents = require('./server/softwareMillCfpScraper');
 const getCfpsFromData = require('./server/dataFetcher');
