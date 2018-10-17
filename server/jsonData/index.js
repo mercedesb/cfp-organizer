@@ -1,4 +1,4 @@
-var cfps = require('../data/cfps.json');
+var cfps = require('../../data/cfps.json');
 
 function getCfpsFromData() {
   return cfps;

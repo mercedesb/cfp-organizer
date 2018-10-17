@@ -5,7 +5,7 @@ var mcache = require('memory-cache');
 const getPapercallEvents = require('./server/papercall');
 const getConfsTechEvents = require('./server/confstech');
 const getSoftwareMillEvents = require('./server/softwareMillCfp');
-const getCfpsFromData = require('./server/dataFetcher');
+const getCfpsFromData = require('./server/jsonData');
 const filterOutPastEvents = require('./server/filterEvents');
 const geocode = require('./server/geocode');
 
