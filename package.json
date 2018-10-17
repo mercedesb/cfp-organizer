@@ -6,8 +6,9 @@
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "start": "node server.js",
-    "test": "jest",
+    "test": "yarn test-server && yarn test-client",
     "test-client": "cd client && yarn test",
+    "test-server": "yarn jest server",
     "heroku-postbuild": "cd client && yarn && yarn run build"
   },
   "dependencies": {
