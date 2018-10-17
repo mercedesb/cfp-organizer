@@ -97,5 +97,41 @@
     "cfpClose": "November 26, 2018",
     "cfpUrl": "https://us.pycon.org/2019/speaking/",
     "eventTags": ""
+  },
+  {
+    "name": "DevOpsDays Seattle 2019",
+    "location": "Seattle, Washington",
+    "date": "April 23, 2019",
+    "url": "www.devopsdays.org/events/2019-seattle",
+    "cfpClose": "January 6, 2019",
+    "cfpUrl": "https://sessionize.com/devopsdays-seattle-2019/",
+    "eventTags": ""
+  },
+  {
+    "name": "BSidesPhilly",
+    "location": "Philadelphia, Pennsylvania",
+    "date": "February 1, 2019",
+    "url": "https://www.bsidesphilly.org/",
+    "cfpClose": "December 20, 2018",
+    "cfpUrl": "https://www.bsidesphilly.org/cfp/submit-cfp/",
+    "eventTags": ""
+  },
+  {
+    "name": "CodeStock 2019",
+    "location": "Knoxville, Tennessee",
+    "date": "April 12, 2019",
+    "url": "https://codestock.org",
+    "cfpClose": "November 9, 2018",
+    "cfpUrl": "https://sessionize.com/codestock-2019",
+    "eventTags": ""
+  },
+  {
+    "name": "#PerfMatters",
+    "location": "Redwood City, California",
+    "date": "April 2, 2019",
+    "url": "https://perfmattersconf.com/",
+    "cfpClose": "November 15, 2018",
+    "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdQRdvQdU1-s5P_s2ib-3fj04_L0TbI2pf7jlIjFN2yefOEhw/viewform",
+    "eventTags": ""
   }
 ]
