@@ -142,5 +142,77 @@
     "cfpClose": "November 30, 2018",
     "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLScCqhAd6NCfE7JNz12waEIQeWULw0xF4ngbTgenWfIyt_WQtQ/viewform",
     "eventTags": ""
+  },
+  {
+    "name": "Security Fest",
+    "location": "Gothenburg, Sweden",
+    "date": "May 23, 2019",
+    "url": "https://securityfest.com/",
+    "cfpClose": "",
+    "cfpUrl": "https://securityfest.com/cfp/",
+    "eventTags": ""
+  },
+  {
+    "name": "JSConf EU",
+    "location": "Berlin, Germany",
+    "date": "June 1, 2019",
+    "url": "https://2019.jsconf.eu",
+    "cfpClose": "December 23, 2018",
+    "cfpUrl": "https://2019.jsconf.eu/call-for-speakers",
+    "eventTags": "javascript"
+  },
+  {
+    "name": "React Amsterdam",
+    "location": "Kromhouthal, Amsterdam",
+    "date": "April 12, 2019",
+    "url": "https://react.amsterdam/",
+    "cfpClose": "January 15, 2019",
+    "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLScp579UIRDbwHI2Auqm1wiZ71UUz1to6-P29iMbSczCHjJkJA/viewform",
+    "eventTags": "javascript"
+  },
+  {
+    "name": "BSidesIowa 2019",
+    "location": "Grandview University, Des Moines, Iowa",
+    "date": "April 20, 2019",
+    "url": "https://bsidesiowa.com/",
+    "cfpClose": "February 15, 2019",
+    "cfpUrl": "https://bsidesiowa.com/call-for-papers/",
+    "eventTags": ""
+  },
+  {
+    "name": "CSSconf EU",
+    "location": "Berlin, Germany",
+    "date": "May 31, 2019",
+    "url": "https://2019.cssconf.eu/",
+    "cfpClose": "December 23, 2018",
+    "cfpUrl": "https://2019.cssconf.eu/call-for-speakers/",
+    "eventTags": "CSS"
+  },
+  {
+    "name": "O'Reilly OSCON 2019",
+    "location": "Portland, Oregon",
+    "date": "July 15, 2019",
+    "url": "https://conferences.oreilly.com/oscon/oscon-or",
+    "cfpClose": "January 15, 2019",
+    "cfpUrl": "https://conferences.oreilly.com/oscon/oscon-or/public/cfp/694",
+    "eventTags": "open source"
+  },
+  {
+    "name": "O'Reilly Velocity Conference 2019",
+    "location": "San Jose, California",
+    "date": "June 10, 2019",
+    "url": "https://conferences.oreilly.com/velocity/vl-ca",
+    "cfpClose": "December 10, 2018",
+    "cfpUrl": "https://conferences.oreilly.com/velocity/vl-ca/public/cfp/690",
+    "eventTags": "Serverless, Containers, Kubernetes, and Microservices, Monitoring, Observability, and Performance, SRE and DevOps"
+  },
+  {
+    "name": "O'Reilly Software Architecture Conference 2019",
+    "location": "San Jose, California",
+    "date": "June 10, 2019",
+    "url": "https://conferences.oreilly.com/software-architecture/sa-ca",
+    "cfpClose": "December 18, 2018",
+    "cfpUrl": "https://conferences.oreilly.com/software-architecture/sa-ca/public/cfp/698",
+    "eventTags": "Application architecture, Event-driven architecture, Chaos engineering, Domain-driven design"
   }
 ]
