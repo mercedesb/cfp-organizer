@@ -97,5 +97,68 @@
     "cfpClose": "November 26, 2018",
     "cfpUrl": "https://us.pycon.org/2019/speaking/",
     "eventTags": ""
+  },
+  {
+    "name": "Reactathon",
+    "location": "San Francisco, California",
+    "date": "March 30, 2019",
+    "url": "https://www.reactathon.com/",
+    "cfpClose": "January 15, 2019",
+    "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf3gtpQkYb2SNNI2WxBTC2rFYpFUn6cyMA9k8HZVZrwg0gYVw/viewform",
+    "eventTags": "Javascript, React"
+  },
+  {
+    "name": "Refactr 2019",
+    "location": "Atlanta, Georgia",
+    "date": "June 5, 2019",
+    "url": "http://refactr.tech/",
+    "cfpClose": "February 15, 2019",
+    "cfpUrl": "https://cfp.connectevents.io/en/refactr2019/cfp/session/new",
+    "eventTags": ""
+  },
+  {
+    "name": "Forward JS Ottawa 2019",
+    "location": "Ottawa, Canada",
+    "date": "April 9, 2019",
+    "url": "https://forwardjs.com/ottawa",
+    "cfpClose": "February 15, 2019",
+    "cfpUrl": "https://cfp.connectevents.io/en/refactr2019/cfp/session/new",
+    "eventTags": ""
+  },
+  {
+    "name": "CONNECT 2019",
+    "location": "San Franciso, California",
+    "date": "April 13, 2019",
+    "url": "https://code.womenwhocode.com/connect2019cfp/",
+    "cfpClose": "February 1, 2019",
+    "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLSedy7o64snt5xsY-W4ng0yTOfhY8FP4f4rlIClkuNpUbPXHAA/viewform",
+    "eventTags": ""
+  },
+  {
+    "name": "ChiPy: Chicago's Python User Group Meetup",
+    "location": "Chicago, Illinois",
+    "date": "",
+    "url": "https://www.chipy.org/",
+    "cfpClose": "February 1, 2050",
+    "cfpUrl": "https://www.chipy.org/meetings/topics/propose/",
+    "eventTags": "Python"
+  },
+  {
+    "name": "Chicago Roboto",
+    "location": "Chicago, Illinois",
+    "date": "April 25, 2019",
+    "url": "http://chicagoroboto.com",
+    "cfpClose": "January 4, 2019",
+    "cfpUrl": "http://chicagoroboto.com/call-for-papers/",
+    "eventTags": "Android"
+  },
+  {
+    "name": "Revolution Conf",
+    "location": "Wyndham Virginia Beach, Virginia Beach, United States",
+    "date": "June 6, 2019",
+    "url": "https://revolutionconf.com/",
+    "cfpClose": "January 18, 2019",
+    "cfpUrl": "https://sessionize.com/revolutionconf-2019/",
+    "eventTags": ""
   }
 ]
