@@ -39,7 +39,7 @@ describe('parseEvents', () => {
       location: 'Vienna, Austria',
       date: 'November 24, 2018',
       url: 'https://devfest.at',
-      cfpClose: 'October 26, 2018',
+      cfpClose: 'October 26, 2019',
       cfpUrl: 'https://devfest.at/call',
       eventTags: 'android'
     })
