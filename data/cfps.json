@@ -277,5 +277,23 @@
     "cfpClose": "December 18, 2018",
     "cfpUrl": "https://conferences.oreilly.com/software-architecture/sa-ca/public/cfp/698",
     "eventTags": "Application architecture, Event-driven architecture, Chaos engineering, Domain-driven design"
+  },
+  {
+    "name": "RailsConf 2019",
+    "location": "Minneapolis, Minnesota",
+    "date": "April 30, 2019",
+    "url": "https://railsconf.com/",
+    "cfpClose": "January 25, 2019",
+    "cfpUrl": "https://cfp.rubycentral.org/events/railsconf2019",
+    "eventTags": "Ruby, Rails, Ruby on Rails"
+  },
+  {
+    "name": "THAT Conference",
+    "location": "Wisconsin Dells, Wisconsin",
+    "date": "August 5, 2019",
+    "url": "https://www.thatconference.com/",
+    "cfpClose": "March 1, 2019",
+    "cfpUrl": "https://www.thatconference.com/Sessions/Submit",
+    "eventTags": "Polyglot"
   }
 ]
