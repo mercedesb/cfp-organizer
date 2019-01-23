@@ -295,5 +295,32 @@
     "cfpClose": "March 1, 2019",
     "cfpUrl": "https://www.thatconference.com/Sessions/Submit",
     "eventTags": "Polyglot"
+  },
+  {
+    "name": "Diana Initiative 2019",
+    "location": "Las Vegas, Nevada",
+    "date": "August 9, 2019",
+    "url": "https://www.dianainitiative.org/",
+    "cfpClose": "February 22, 2019",
+    "cfpUrl": "https://dianainitiative2019.busyconf.com/proposals/new",
+    "eventTags": "infosec, women in tech"
+  },
+  {
+    "name": "KiCon 2019",
+    "location": "Chicago, IL",
+    "date": "April 26, 2019",
+    "url": "https://kicad-kicon.com/",
+    "cfpClose": "February 8, 2019",
+    "cfpUrl": "https://kicad-kicon.com/submit-a-talk-proposal/",
+    "eventTags": "Python, KiCad"
+  },
+  {
+    "name": "Apache Roadshow Chicago",
+    "location": "Chicago, IL",
+    "date": "May 13, 2019",
+    "url": "https://www.apachecon.com/chiroadshow19/index.html",
+    "cfpClose": "February 15, 2019",
+    "cfpUrl": "https://www.apachecon.com/chiroadshow19/cfp.html",
+    "eventTags": "Apache"
   }
 ]
