@@ -277,5 +277,68 @@
     "cfpClose": "December 18, 2018",
     "cfpUrl": "https://conferences.oreilly.com/software-architecture/sa-ca/public/cfp/698",
     "eventTags": "Application architecture, Event-driven architecture, Chaos engineering, Domain-driven design"
+  },
+  {
+    "name": "RailsConf 2019",
+    "location": "Minneapolis, Minnesota",
+    "date": "April 30, 2019",
+    "url": "https://railsconf.com/",
+    "cfpClose": "January 25, 2019",
+    "cfpUrl": "https://cfp.rubycentral.org/events/railsconf2019",
+    "eventTags": "Ruby, Rails, Ruby on Rails"
+  },
+  {
+    "name": "THAT Conference",
+    "location": "Wisconsin Dells, Wisconsin",
+    "date": "August 5, 2019",
+    "url": "https://www.thatconference.com/",
+    "cfpClose": "March 1, 2019",
+    "cfpUrl": "https://www.thatconference.com/Sessions/Submit",
+    "eventTags": "Polyglot"
+  },
+  {
+    "name": "Diana Initiative 2019",
+    "location": "Las Vegas, Nevada",
+    "date": "August 9, 2019",
+    "url": "https://www.dianainitiative.org/",
+    "cfpClose": "February 22, 2019",
+    "cfpUrl": "https://dianainitiative2019.busyconf.com/proposals/new",
+    "eventTags": "infosec, women in tech"
+  },
+  {
+    "name": "KiCon 2019",
+    "location": "Chicago, IL",
+    "date": "April 26, 2019",
+    "url": "https://kicad-kicon.com/",
+    "cfpClose": "February 8, 2019",
+    "cfpUrl": "https://kicad-kicon.com/submit-a-talk-proposal/",
+    "eventTags": "Python, KiCad"
+  },
+  {
+    "name": "Apache Roadshow Chicago",
+    "location": "Chicago, IL",
+    "date": "May 13, 2019",
+    "url": "https://www.apachecon.com/chiroadshow19/index.html",
+    "cfpClose": "February 15, 2019",
+    "cfpUrl": "https://www.apachecon.com/chiroadshow19/cfp.html",
+    "eventTags": "Apache"
+  },
+  {
+    "name": "CircleCityCon",
+    "location": "Indianapolis, IN",
+    "date": "May 31, 2019",
+    "url": "https://circlecitycon.com/",
+    "cfpClose": "March 3, 2019",
+    "cfpUrl": "https://circlecitycon.com/cfp/",
+    "eventTags": ""
+  },
+  {
+    "name": "self.conference",
+    "location": "Detroit, MI",
+    "date": "June 7, 2019",
+    "url": "http://selfconference.org//",
+    "cfpClose": "February 18, 2019",
+    "cfpUrl": "http://selfconference.org/accounts/sessions",
+    "eventTags": "web, mobile, backend, concurrent systems, accessibility, team communication, inclusivity, mental health"
   }
 ]
