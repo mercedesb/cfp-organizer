@@ -26,6 +26,7 @@ Make a PR! I have a manually curated list of CFPs [here](./data/cfps.json) for C
 ## Installation
 ```
 git clone https://github.com/mercedesb/cfp-organizer.git
+cd cfp-organizer
 yarn
 cd client && yarn
 ```
