@@ -61,6 +61,7 @@ To run the client and server separately
 ## CFP Sources
 - [Papercall](https://www.papercall.io/)
 - [Confs.tech](https://confs.tech)
+- [CFP Land](https://cfpland.com)
 - [SoftwareMill's it-cfp-list](https://github.com/softwaremill/it-cfp-list)
 - [Manually curated via cfps.json](./data/cfps.json)
 
