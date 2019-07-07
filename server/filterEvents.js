@@ -1,10 +1,11 @@
 function filterOutPastEvents(data) {
   const today = new Date().setUTCHours(0, 0, 0, 0);
-  
+
   const events = [];
-  data.forEach((dataItem) => {
+  data.forEach(dataItem => {
     const cfpCloseDate = new Date(dataItem.cfpClose);
-    if (cfpCloseDate >= today) {
+    const eventDate = new Date(dataItem.date);
+    if (cfpCloseDate >= today && eventDate >= today) {
       events.push(dataItem);
     }
   });
@@ -12,4 +13,20 @@ function filterOutPastEvents(data) {
   return events;
 }
 
-module.exports = filterOutPastEvents;
+function filterOutDuplicates(data) {
+  return data.reduce((unique, item) => {
+    return unique.find(
+      el =>
+        el.name === item.name &&
+        el.location === item.location &&
+        el.date === item.date
+    )
+      ? unique
+      : [...unique, item];
+  }, []);
+}
+
+module.exports = {
+  filterOutPastEvents: filterOutPastEvents,
+  filterOutDuplicates: filterOutDuplicates
+};

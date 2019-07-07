@@ -7,7 +7,7 @@ const getConfsTechEvents = require("./server/confstech");
 const getSoftwareMillEvents = require("./server/softwareMillCfp");
 const getCfpLandEvents = require("./server/cfpLand");
 const getCfpsFromData = require("./server/jsonData");
-const filterOutPastEvents = require("./server/filterEvents");
+const filterEvents = require("./server/filterEvents");
 const geocode = require("./server/geocode");
 
 const app = express();
@@ -51,7 +51,8 @@ app.get("/api/openCfps", cache(CACHE_DURATION), (req, res) => {
     .then(arrReturnedEvents => {
       return [].concat.apply([], arrReturnedEvents); // .flat() is still in Candidate and not avail in Node
     })
-    .then(events => filterOutPastEvents(events))
+    .then(events => filterEvents.filterOutDuplicates(events))
+    .then(events => filterEvents.filterOutPastEvents(events))
     .then(events => geocode(events))
     .then(events => res.send({ events: events }));
 });
