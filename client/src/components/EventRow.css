@@ -1,0 +1,27 @@
+.SvgButton {
+  height: 30px;
+  width: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.SvgButton:focus {
+  outline: 2px dashed #17171D;
+}
+
+.SvgButton::-moz-focus-inner {
+  border: 0;
+}
+
+.SvgButton svg {
+  outline: none;
+}
+
+.u-srOnly {
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}

@@ -39,7 +39,16 @@
   background-color: #eee;
 }
 
-.Table-cell--location {
+.EventRow-name {
+  display: flex;
+  align-items: center;
+}
+
+.EventRow-name svg {
+  margin-right: 10px;
+}
+
+.EventRow-location {
   display: flex;
   flex-direction: column;
 }
