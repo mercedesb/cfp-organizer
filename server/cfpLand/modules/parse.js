@@ -54,7 +54,7 @@ function parseEvent($, el) {
     cfpUrl: cfpUrl || "",
     eventTags: parseTags(tags)
   };
-  // console.log(cfpObj);
+
   return cfpObj;
 }
 

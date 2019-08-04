@@ -50,13 +50,15 @@ ShallowWrapper {
         <p
           className="Created u-small"
 >
-          Created by Mercedes Bernard | 
+          Created by Mercedes Bernard |
+           
           <a
                     href="https://github.com/mercedesb"
           >
                     Github
           </a>
-           | 
+           |
+           
           <a
                     href="https://twitter.com/mercedescodes"
           >
@@ -195,13 +197,15 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            "Created by Mercedes Bernard | ",
+            "Created by Mercedes Bernard |",
+            " ",
             <a
               href="https://github.com/mercedesb"
 >
               Github
 </a>,
-            " | ",
+            " |",
+            " ",
             <a
               href="https://twitter.com/mercedescodes"
 >
@@ -212,7 +216,8 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": Array [
-          "Created by Mercedes Bernard | ",
+          "Created by Mercedes Bernard |",
+          " ",
           Object {
             "instance": null,
             "key": undefined,
@@ -225,7 +230,8 @@ ShallowWrapper {
             "rendered": "Github",
             "type": "a",
           },
-          " | ",
+          " |",
+          " ",
           Object {
             "instance": null,
             "key": undefined,
@@ -283,13 +289,15 @@ ShallowWrapper {
           <p
             className="Created u-small"
 >
-            Created by Mercedes Bernard | 
+            Created by Mercedes Bernard |
+             
             <a
                         href="https://github.com/mercedesb"
             >
                         Github
             </a>
-             | 
+             |
+             
             <a
                         href="https://twitter.com/mercedescodes"
             >
@@ -428,13 +436,15 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              "Created by Mercedes Bernard | ",
+              "Created by Mercedes Bernard |",
+              " ",
               <a
                 href="https://github.com/mercedesb"
 >
                 Github
 </a>,
-              " | ",
+              " |",
+              " ",
               <a
                 href="https://twitter.com/mercedescodes"
 >
@@ -445,7 +455,8 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": Array [
-            "Created by Mercedes Bernard | ",
+            "Created by Mercedes Bernard |",
+            " ",
             Object {
               "instance": null,
               "key": undefined,
@@ -458,7 +469,8 @@ ShallowWrapper {
               "rendered": "Github",
               "type": "a",
             },
-            " | ",
+            " |",
+            " ",
             Object {
               "instance": null,
               "key": undefined,
