@@ -336,9 +336,54 @@
     "name": "self.conference",
     "location": "Detroit, MI",
     "date": "June 7, 2019",
-    "url": "http://selfconference.org//",
+    "url": "http://selfconference.org/",
     "cfpClose": "February 18, 2019",
     "cfpUrl": "http://selfconference.org/accounts/sessions",
     "eventTags": "web, mobile, backend, concurrent systems, accessibility, team communication, inclusivity, mental health"
+  },
+  {
+    "name": "PyCon Ireland 2019",
+    "location": "Dublin, Ireland",
+    "date": "October 12, 2019",
+    "url": "https://python.ie/pycon-2019/",
+    "cfpClose": "August 11, 2019",
+    "cfpUrl": "http://python.ie/pycon-2019/call-proposals/",
+    "eventTags": "python"
+  },
+  {
+    "name": "Node.TLV 2020",
+    "location": "Tel Aviv, Israel",
+    "date": "March 3, 2020",
+    "url": "https://www.nodetlv.com/",
+    "cfpClose": "November 15, 2019",
+    "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd8XUCFgFpAidZIPYWmKURAnmYQs4EvHrEFb3AdgVez0HJUtw/viewform",
+    "eventTags": "nodejs"
+  },
+  {
+    "name": "ReactNext 2020",
+    "location": "Tel Aviv, Israel",
+    "date": "June 15, 2020",
+    "url": "https://react-next.com/",
+    "cfpClose": "Feb 15, 2020",
+    "cfpUrl": "https://docs.google.com/forms/d/e/1FAIpQLScZh0jCIxXX2F3kObeBVR2R-IVGjt_QWeFGnvR-l6453NX8-A/viewform",
+    "eventTags": "react"
+  },
+  {
+    "name": "North Bay Python 2019",
+    "location": "Petaluma, CA",
+    "date": "November 2, 2019",
+    "url": "https://2019.northbaypython.org/",
+    "cfpClose": "August 9, 2019",
+    "cfpUrl": "https://2019.northbaypython.org/speak/",
+    "eventTags": "python"
+  },
+  {
+    "name": "Ruby Conf 2019",
+    "location": "Nashville, TN",
+    "date": "November 18, 2019",
+    "url": "http://rubyconf.org/",
+    "cfpClose": "August 7, 2019",
+    "cfpUrl": "https://cfp.rubycentral.org/events/rubyconf2019",
+    "eventTags": "ruby"
   }
 ]
