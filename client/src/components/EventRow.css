@@ -8,7 +8,7 @@
 }
 
 .SvgButton:focus {
-  outline: 2px dashed #17171D;
+  outline: 3px auto #0074d9;
 }
 
 .SvgButton::-moz-focus-inner {
@@ -24,4 +24,11 @@
   overflow: hidden;
   position: absolute;
   width: 1px;
+}
+
+.EventRow-button {
+  border: none;
+  display: block;
+  font-size: 1em;
+  width: 100%;
 }

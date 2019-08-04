@@ -32,19 +32,38 @@ ShallowWrapper {
           >
                     <li
                               className="ViewList-item ViewList-item--active"
-                              onClick={[Function]}
                     >
-                              List
+                              <button
+                                        className="Link"
+                                        onClick={[Function]}
+                              >
+                                        List
+                              </button>
                     </li>
                     <li
                               className="ViewList-item "
-                              onClick={[Function]}
                     >
-                              Map
+                              <button
+                                        className="Link"
+                                        onClick={[Function]}
+                              >
+                                        Map
+                              </button>
+                    </li>
+                    <li
+                              className="ViewList-item "
+                    >
+                              <button
+                                        className="Link"
+                                        onClick={[Function]}
+                              >
+                                        Liked
+                              </button>
                     </li>
           </ul>
 </div>,
         <Unknown />,
+        false,
         false,
         false,
         <p
@@ -87,15 +106,33 @@ ShallowWrapper {
 >
               <li
                             className="ViewList-item ViewList-item--active"
-                            onClick={[Function]}
               >
-                            List
+                            <button
+                                          className="Link"
+                                          onClick={[Function]}
+                            >
+                                          List
+                            </button>
               </li>
               <li
                             className="ViewList-item "
-                            onClick={[Function]}
               >
-                            Map
+                            <button
+                                          className="Link"
+                                          onClick={[Function]}
+                            >
+                                          Map
+                            </button>
+              </li>
+              <li
+                            className="ViewList-item "
+              >
+                            <button
+                                          className="Link"
+                                          onClick={[Function]}
+                            >
+                                          Liked
+                            </button>
               </li>
 </ul>,
           ],
@@ -133,15 +170,33 @@ ShallowWrapper {
               "children": Array [
                 <li
                   className="ViewList-item ViewList-item--active"
-                  onClick={[Function]}
 >
-                  List
+                  <button
+                                    className="Link"
+                                    onClick={[Function]}
+                  >
+                                    List
+                  </button>
 </li>,
                 <li
                   className="ViewList-item "
-                  onClick={[Function]}
 >
-                  Map
+                  <button
+                                    className="Link"
+                                    onClick={[Function]}
+                  >
+                                    Map
+                  </button>
+</li>,
+                <li
+                  className="ViewList-item "
+>
+                  <button
+                                    className="Link"
+                                    onClick={[Function]}
+                  >
+                                    Liked
+                  </button>
 </li>,
               ],
               "className": "ViewList",
@@ -153,12 +208,28 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "List",
+                  "children": <button
+                    className="Link"
+                    onClick={[Function]}
+>
+                    List
+</button>,
                   "className": "ViewList-item ViewList-item--active",
-                  "onClick": [Function],
                 },
                 "ref": null,
-                "rendered": "List",
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "List",
+                    "className": "Link",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "List",
+                  "type": "button",
+                },
                 "type": "li",
               },
               Object {
@@ -166,12 +237,57 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Map",
+                  "children": <button
+                    className="Link"
+                    onClick={[Function]}
+>
+                    Map
+</button>,
                   "className": "ViewList-item ",
-                  "onClick": [Function],
                 },
                 "ref": null,
-                "rendered": "Map",
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Map",
+                    "className": "Link",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Map",
+                  "type": "button",
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <button
+                    className="Link"
+                    onClick={[Function]}
+>
+                    Liked
+</button>,
+                  "className": "ViewList-item ",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Liked",
+                    "className": "Link",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Liked",
+                  "type": "button",
+                },
                 "type": "li",
               },
             ],
@@ -189,6 +305,7 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      false,
       false,
       false,
       Object {
@@ -271,19 +388,38 @@ ShallowWrapper {
             >
                         <li
                                     className="ViewList-item ViewList-item--active"
-                                    onClick={[Function]}
                         >
-                                    List
+                                    <button
+                                                className="Link"
+                                                onClick={[Function]}
+                                    >
+                                                List
+                                    </button>
                         </li>
                         <li
                                     className="ViewList-item "
-                                    onClick={[Function]}
                         >
-                                    Map
+                                    <button
+                                                className="Link"
+                                                onClick={[Function]}
+                                    >
+                                                Map
+                                    </button>
+                        </li>
+                        <li
+                                    className="ViewList-item "
+                        >
+                                    <button
+                                                className="Link"
+                                                onClick={[Function]}
+                                    >
+                                                Liked
+                                    </button>
                         </li>
             </ul>
 </div>,
           <Unknown />,
+          false,
           false,
           false,
           <p
@@ -326,15 +462,33 @@ ShallowWrapper {
 >
                 <li
                                 className="ViewList-item ViewList-item--active"
-                                onClick={[Function]}
                 >
-                                List
+                                <button
+                                                className="Link"
+                                                onClick={[Function]}
+                                >
+                                                List
+                                </button>
                 </li>
                 <li
                                 className="ViewList-item "
-                                onClick={[Function]}
                 >
-                                Map
+                                <button
+                                                className="Link"
+                                                onClick={[Function]}
+                                >
+                                                Map
+                                </button>
+                </li>
+                <li
+                                className="ViewList-item "
+                >
+                                <button
+                                                className="Link"
+                                                onClick={[Function]}
+                                >
+                                                Liked
+                                </button>
                 </li>
 </ul>,
             ],
@@ -372,15 +526,33 @@ ShallowWrapper {
                 "children": Array [
                   <li
                     className="ViewList-item ViewList-item--active"
-                    onClick={[Function]}
 >
-                    List
+                    <button
+                                        className="Link"
+                                        onClick={[Function]}
+                    >
+                                        List
+                    </button>
 </li>,
                   <li
                     className="ViewList-item "
-                    onClick={[Function]}
 >
-                    Map
+                    <button
+                                        className="Link"
+                                        onClick={[Function]}
+                    >
+                                        Map
+                    </button>
+</li>,
+                  <li
+                    className="ViewList-item "
+>
+                    <button
+                                        className="Link"
+                                        onClick={[Function]}
+                    >
+                                        Liked
+                    </button>
 </li>,
                 ],
                 "className": "ViewList",
@@ -392,12 +564,28 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "List",
+                    "children": <button
+                      className="Link"
+                      onClick={[Function]}
+>
+                      List
+</button>,
                     "className": "ViewList-item ViewList-item--active",
-                    "onClick": [Function],
                   },
                   "ref": null,
-                  "rendered": "List",
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "List",
+                      "className": "Link",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "List",
+                    "type": "button",
+                  },
                   "type": "li",
                 },
                 Object {
@@ -405,12 +593,57 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Map",
+                    "children": <button
+                      className="Link"
+                      onClick={[Function]}
+>
+                      Map
+</button>,
                     "className": "ViewList-item ",
-                    "onClick": [Function],
                   },
                   "ref": null,
-                  "rendered": "Map",
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Map",
+                      "className": "Link",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "Map",
+                    "type": "button",
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <button
+                      className="Link"
+                      onClick={[Function]}
+>
+                      Liked
+</button>,
+                    "className": "ViewList-item ",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Liked",
+                      "className": "Link",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "Liked",
+                    "type": "button",
+                  },
                   "type": "li",
                 },
               ],
@@ -428,6 +661,7 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
+        false,
         false,
         false,
         Object {

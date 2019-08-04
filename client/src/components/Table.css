@@ -8,8 +8,8 @@
 }
 
 @media (max-width: 800px) {
-  .Table { 
-    display: none; 
+  .Table {
+    display: none;
   }
 
   .Table--mobile {
@@ -54,14 +54,14 @@
 }
 
 @media (max-width: 1000px) {
-  .Table-cell:last-child { 
-    display: none; 
+  .Table-cell:last-child {
+    display: none;
   }
 }
 
 @media (max-width: 800px) {
-  .Table-cell:last-child { 
-    display: block; 
+  .Table-cell:last-child {
+    display: block;
   }
 }
 
@@ -82,8 +82,8 @@
 }
 
 .Arrow {
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
 }
@@ -120,13 +120,13 @@
 }
 
 .Table--mobile .EventRow-cell--body {
-  display:none;
+  display: none;
 }
 
-.EventRow--active .EventRow-cell--header {
+.EventRow--active .EventRow-button {
   box-shadow: 0 4px 2px -2px #ccc;
 }
 
 .EventRow--active .EventRow-cell--body {
-  display:block;
+  display: block;
 }

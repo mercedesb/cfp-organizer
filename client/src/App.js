@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import moment from "moment";
 import { Loading } from "./components/Loading.js";
 import { Table } from "./components/Table.js";
+import { LikedTable } from "./components/LikedTable.js";
 import { EventRow } from "./components/EventRow.js";
 import { MobileEventRow } from "./components/MobileEventRow.js";
 import { Map } from "./components/Map.js";
@@ -119,17 +120,37 @@ class App extends Component {
               className={`ViewList-item ${
                 this.state.activeView === "list" ? "ViewList-item--active" : ""
               }`}
-              onClick={() => this.setActiveView("list")}
             >
-              List
+              <button
+                className="Link"
+                onClick={() => this.setActiveView("list")}
+              >
+                List
+              </button>
             </li>
             <li
               className={`ViewList-item ${
                 this.state.activeView === "map" ? "ViewList-item--active" : ""
               }`}
-              onClick={() => this.setActiveView("map")}
             >
-              Map
+              <button
+                className="Link"
+                onClick={() => this.setActiveView("map")}
+              >
+                Map
+              </button>
+            </li>
+            <li
+              className={`ViewList-item ${
+                this.state.activeView === "liked" ? "ViewList-item--active" : ""
+              }`}
+            >
+              <button
+                className="Link"
+                onClick={() => this.setActiveView("liked")}
+              >
+                Liked
+              </button>
             </li>
           </ul>
         </div>
@@ -140,7 +161,7 @@ class App extends Component {
               className="Table--mobile"
               headers={this.state.mobileHeaders}
               data={this.state.data}
-              rowComponent={(dataItem, i) => (
+              rowComponent={dataItem => (
                 <MobileEventRow
                   className=""
                   cellClassName="MobileCell"
@@ -155,7 +176,7 @@ class App extends Component {
             <Table
               headers={this.state.tableHeaders}
               data={this.state.data}
-              rowComponent={(dataItem, i) => (
+              rowComponent={dataItem => (
                 <EventRow
                   className="Table-row"
                   cellClassName="Table-cell"
@@ -171,6 +192,39 @@ class App extends Component {
             data={this.state.data}
             popupComponent={dataItem => <EventPopup event={dataItem} />}
           />
+        )}
+
+        {!this.state.loading && this.state.activeView === "liked" && (
+          <React.Fragment>
+            <LikedTable
+              className="Table--mobile"
+              headers={this.state.mobileHeaders}
+              data={this.state.data}
+              rowComponent={dataItem => (
+                <MobileEventRow
+                  className=""
+                  cellClassName="MobileCell"
+                  key={dataItem.key}
+                  event={dataItem}
+                  isActive={this.state.activeDataItem === dataItem.key}
+                  onClick={() => this.setActiveDataItem(dataItem.key)}
+                />
+              )}
+            />
+
+            <LikedTable
+              headers={this.state.tableHeaders}
+              data={this.state.data}
+              rowComponent={dataItem => (
+                <EventRow
+                  className="Table-row"
+                  cellClassName="Table-cell"
+                  key={dataItem.key}
+                  event={dataItem}
+                />
+              )}
+            />
+          </React.Fragment>
         )}
         <p className="Created u-small">
           Created by Mercedes Bernard |{" "}
