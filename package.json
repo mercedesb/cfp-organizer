@@ -15,12 +15,14 @@
     "cheerio": "^1.0.0-rc.2",
     "dateformat": "^3.0.3",
     "express": "^4.16.2",
+    "mem": "^4.0.0",
     "memory-cache": "^0.2.0",
     "node-geocoder": "^3.22.0",
     "path": "^0.12.7",
     "puppeteer": "^1.9.0",
     "request": "^2.88.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "set-value": "^2.0.1"
   },
   "devDependencies": {
     "concurrently": "^3.5.0",
