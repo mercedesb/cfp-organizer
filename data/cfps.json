@@ -1,5 +1,14 @@
 [
   {
+    "name": "php[tek] 2020",
+    "location": "Nashville, TN, USA",
+    "date": "May 20, 2020",
+    "url": "https://tek.phparch.com/",
+    "cfpUrl": "https://sessionize.com/phptek-2020",
+    "cfpClose": "January 4, 2020",
+    "eventTags": "PHP, Web Technology, Tech Leadership"
+  },
+  {
     "name": "PHP Yorkshire 2019",
     "location": "Heslington, York, UK",
     "date": "April 11, 2019",
