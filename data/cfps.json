@@ -1,5 +1,14 @@
 [
   {
+    "name": "DevFest WI",
+    "location": "Online",
+    "date": "October 24, 2020",
+    "url": "https://devfestwi.com/",
+    "cfpUrl": "https://sessionize.com/devfest-wi-2020/",
+    "cfpClose": "August 15, 2020",
+    "eventTags": "Web, Inclusion, Core Skills"
+  },
+  {
     "name": "php[tek] 2020",
     "location": "Nashville, TN, USA",
     "date": "May 20, 2020",
