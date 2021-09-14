@@ -23,7 +23,7 @@
     "puppeteer": "^2.0.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.2",
-    "set-value": "^2.0.1"
+    "set-value": "^4.0.1"
   },
   "devDependencies": {
     "concurrently": "^5.0.0",
